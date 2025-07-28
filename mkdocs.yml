@@ -1,0 +1,103 @@
+# ─────────────  BÁSICO  ─────────────
+site_name: LuxorASAP Onedrive Docs
+site_description: Documentação completa do stack LuxorASAP em produção (2025)
+site_url: https://SEU_DOMINIO    # ajuste depois de publicar
+copyright: "© Luxor Group"
+
+# ──────────  TEMA (Material) ─────────
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/logo_png.png         # opcional
+  favicon: assets/logo_png.png   # opcional
+  features:
+    - navigation.sections             # menu lateral em seções
+    - navigation.instant              # navegação sem recarregar
+    - content.code.copy               # botão "Copiar código"
+    - search.highlight                # destaque de resultado
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+
+# ───────────  NAVEGAÇÃO  ────────────
+nav:
+  - Visão Geral: index.md
+
+  - Arquitetura:
+      - Estrutura de arquivos: architecture/file_tree.md
+      - Data-flow: architecture/data_flow.md
+
+  - Módulos:
+      - carteira_online.production:
+          - portfolio_builder.py: modules/carteira_online/production/portfolio_builder.md
+          - return_calculator.py: modules/carteira_online/production/return_calculator.md
+          - cash_calculator.py: modules/carteira_online/production/cash_calculator.md
+          - btg_data_extraction.py: modules/carteira_online/production/btg_data_extraction.md
+          - asset_data_extraction.py: modules/carteira_online/production/asset_data_extraction.md
+          - historical_data_extraction.py: modules/carteira_online/production/historical_data_extraction.md
+          - leitor_carteira_excel.py: modules/carteira_online/production/leitor_carteira_excel.md
+          - onedrive_file_redirect.py: modules/carteira_online/production/onedrive_file_redirect.md
+      - source_bases.scripts:
+          - hist_concentration_updater.py: modules/source_bases/scripts/hist_concentration_updater.md
+          - custom_funds_quotas_updater.py: modules/source_bases/scripts/custom_funds_quotas_updater.md
+          - non_bbg_data_updater.py: modules/source_bases/scripts/non_bbg_data_updater.md
+          - daily_pnl_updater.py: modules/source_bases/scripts/daily_pnl_updater.md
+          - historical_quotas_updater.py: modules/source_bases/scripts/historical_quotas_updater.md
+          - risk_metrics_updater.py: modules/source_bases/scripts/risk_metrics_updater.md
+          - us_cash_updater.py: modules/source_bases/scripts/us_cash_updater.md
+          - swaps_updater.py: modules/source_bases/scripts/swaps_updater.md
+      - run_luxorASAP.py: modules/run_luxorASAP.md
+      - market_data_extractor.py: modules/market_data_extractor.md
+      - market_data_loader.py: modules/market_data_loader.md
+      - source_bases_updater.py: modules/source_bases_updater.md
+      - luxorDB_datareader.py: modules/luxorDB_datareader.md
+      - luxorDB_dataloader.py: modules/luxorDB_dataloader.md
+
+
+# ───────  EXTENSÕES MARKDOWN  ───────
+markdown_extensions:
+  - admonition                   # caixas > Informação, Atenção…
+  - toc:
+      permalink: "¶"             # âncora nos títulos
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid        # ← diz ao SuperFences que “mermaid” é especial
+          class: mermaid       # ← gera <div class="mermaid">…</div>
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight           # syntax highlight extra
+  - pymdownx.snippets            # incluir trechos externos
+  - pymdownx.tabbed              # abas em exemplos
+  - attr_list                    # {#id .class} em blocos
+  - tables
+
+# ─────────────  PLUG-INS  ───────────
+plugins:
+  - search                       # busca interna
+  - mkdocstrings:
+      handlers:
+        python:
+          # Caminhos onde o mkdocstrings deve procurar os módulos.
+          # Ajuste conforme a posição real do código.
+          #
+          # Se a pasta do código estiver dentro deste mesmo repo:
+          #   paths: ["."]
+          #
+          # Se o código estiver numa pasta-irmã:
+          paths: ["../LuxorASAP"]         # <── troque pelo seu caminho
+          options:
+            docstring_style: google       # numpy ou google
+            show_source: true             # link p/ origem
+
+# ─────  ARQUIVOS EXTRA (opcional) ────
+extra_css:
+  - stylesheets/custom.css       # crie se precisar
+
+extra_javascript: []             # ex.: scripts/mermaid.min.js
+
+# ─────────────  BUILD  ──────────────
+watch:                           # quando rodar `mkdocs serve`
+  - mkdocs.yml
+  - docs/
+  - ../LuxorASAP                 # para auto-reload se código mudar
