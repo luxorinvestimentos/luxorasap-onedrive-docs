@@ -16,7 +16,7 @@
         <link rel="prev" href="../file_tree/">
       
       
-        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
+        <link rel="next" href="../bloomberg_data_pipeline/">
       
       
       <link rel="icon" href="../../assets/logo_png.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Fluxo de dados - Bloomberg → LuxorDB - LuxorASAP Onedrive Docs</title>
+        <title>Data-flow - LuxorASAP Onedrive Docs</title>
       
     
     
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#bloomberg-luxordb-visao-de-alto-nivel" class="md-skip">
-          Pular para conteúdo
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fluxo de dados - Bloomberg → LuxorDB
+              Data-flow
             
           </span>
         </div>
@@ -324,21 +319,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Data-flow
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -352,43 +332,29 @@
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../bloomberg_data_pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bloomberg Data Pipeline
     
+  </span>
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#2-extracao-bloomberg-camada-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 │ Extração Bloomberg → camada raw
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-loader-camada-enriched-ajuste-de-fias" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 │ Loader → camada enriched + ajuste de FIAs
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -1070,34 +1036,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#2-extracao-bloomberg-camada-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 │ Extração Bloomberg → camada raw
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-loader-camada-enriched-ajuste-de-fias" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 │ Loader → camada enriched + ajuste de FIAs
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1113,72 +1051,7 @@
 
 
 
-<h1 id="bloomberg-luxordb-visao-de-alto-nivel">Bloomberg → LuxorDB (Visão de alto nível)<a class="headerlink" href="#bloomberg-luxordb-visao-de-alto-nivel" title="Permanent link">¶</a></h1>
-<pre class="mermaid"><code>flowchart LR
-    H[historico_trades_ativos.xlsx] --&gt; RL(run_luxorASAP)
-    subgraph Metadata["Tabelas criadas"]
-        A[assets.parquet]
-        F[field_map.parquet]
-        AF[asset_field_map.parquet]
-    end
-    RL --&gt; A &amp; F &amp; AF
-
-    classDef module fill:#2ca02c,color:#fff,stroke:#2ca02c;
-    class RL module;</code></pre>
-<hr />
-<h2 id="2-extracao-bloomberg-camada-raw">2 │ Extração Bloomberg → camada <strong>raw</strong><a class="headerlink" href="#2-extracao-bloomberg-camada-raw" title="Permanent link">¶</a></h2>
-<pre class="mermaid"><code>flowchart LR
-    %% entrada
-    A[assets.parquet] &amp; F[field_map.parquet] &amp; AF[asset_field_map.parquet] --&gt; MDE(market_data_extractor)
-
-    %% saída
-    subgraph Raw["ADLS • luxorASAP/raw"]
-        PL[px_last_raw.parquet]
-        HPL[hist_px_last_raw.parquet]
-        LAF[last_all_flds_raw.parquet]
-        HAF[hist_all_flds_raw.parquet]
-        HOL[holidays_raw.parquet]
-    end
-    MDE --&gt; PL &amp; HPL &amp; LAF &amp; HAF &amp; HOL
-
-    classDef module fill:#2ca02c,color:#fff,stroke:#2ca02c;
-    class MDE module;</code></pre>
-<hr />
-<h2 id="3-loader-camada-enriched-ajuste-de-fias">3 │ Loader → camada <strong>enriched</strong> + ajuste de FIAs<a class="headerlink" href="#3-loader-camada-enriched-ajuste-de-fias" title="Permanent link">¶</a></h2>
-<pre class="mermaid"><code>flowchart LR
-    %% arquivos observados
-    subgraph Raw
-        PL[px_last_raw.parquet]
-        HPL[hist_px_last_raw.parquet]
-        LAF[last_all_flds_raw.parquet]
-        HAF[hist_all_flds_raw.parquet]
-        HOL[holidays_raw.parquet]
-    end
-
-    %% tabelas auxiliares
-    subgraph Aux
-        HVC(hist_vc_px_last)
-        HNB(hist_non_bbg_px_last)
-        AFQ(all_funds_quotas)
-        CFQ(custom_funds_quotas)
-        CP(custom_prices)
-    end
-
-    Raw &amp; Aux --&gt; MDL(market_data_loader)
-
-    %% enriched
-    subgraph Enriched["ADLS • luxorASAP/enriched"]
-        PLE[px_last.parquet]
-        HPLE[hist_px_last.parquet]
-        HE[holidays.parquet]
-        LAFE[last_all_flds.parquet]
-        HAFE[hist_all_flds.parquet]
-    end
-    MDL --&gt; PLE &amp; HPLE
-
-    classDef module fill:#2ca02c,color:#fff,stroke:#2ca02c;
-    class MDL module;
-    class LDR module;</code></pre>
+  <h1>Data-flow</h1>
 
 
 
@@ -1186,8 +1059,7 @@
 
 
 
-  
-  
+
 
 
 
