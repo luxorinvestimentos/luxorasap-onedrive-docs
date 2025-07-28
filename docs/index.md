@@ -1,17 +1,27 @@
-# Welcome to MkDocs
+---
+title: Visão Geral
+tags: [overview]
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Visão Geral
 
-## Commands
+Bem-vindo à documentação do **LuxorASAP**, a suíte de scripts e módulos Python utilizada para automação de processos de back-office de investimentos na Luxor.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Esta documentação está organizada nas seguintes seções:
 
-## Project layout
+- **Arquitetura**: visão geral da estrutura de diretórios e fluxos de dados.
+- **Módulos**: referências das docstrings dos principais scripts e pacotes.
+- **How To**: guias rápidos para tarefas recorrentes e resolução de problemas.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Como usar
+
+1. Utilize o menu lateral para navegar entre as seções.
+2. Em **Arquitetura > Estrutura de arquivos**, explore o layout completo do projeto.
+3. Na seção **Diagrams**, visualize os fluxos de dados, extração do Bloomberg e processos de atualização.
+4. Em **How To**, siga instruções passo a passo para tarefas específicas, como adicionar novos ativos.
+
+## Interação via ChatGPT
+
+Após publicar em GitHub Pages (por exemplo, `https://luxorgroup.github.io/luxorASAP-docs/`), copie a URL e cole em uma sessão do ChatGPT. O modelo carregará a documentação em tempo real e responderá perguntas sobre o sistema.
+
+---
