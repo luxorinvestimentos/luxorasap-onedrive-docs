@@ -28,6 +28,7 @@ nav:
   - Arquitetura:
       - Estrutura de arquivos: architecture/file_tree.md
       - Data-flow: architecture/data_flow.md
+      - Bloomberg Data Pipeline: architecture/bloomberg_data_pipeline.md
 
   - Módulos:
       - carteira_online.production:
