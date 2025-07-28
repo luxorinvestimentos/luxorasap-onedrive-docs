@@ -1,0 +1,40 @@
+/* 1. Importa Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* 2. Aplica como fonte principal */
+:root {
+  --md-font-family: 'Inter', sans-serif;
+}
+
+/* 3. Ajusta line-height e espaçamento para melhor legibilidade */
+.md-content {
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* Sidebar mais estreita e com sombra */
+.md-sidebar {
+  max-width: 260px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho fixo e limpo */
+.md-header {
+  height: 56px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Destaque nos blocos de código */
+.md-typeset pre {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+/* Blocos Mermaid com borda sutil */
+.mermaid {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background-color: #fafafa;
+}
