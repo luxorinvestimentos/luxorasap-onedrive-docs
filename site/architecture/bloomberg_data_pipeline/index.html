@@ -10,9 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://SEU_DOMINIO/how_to/add_new_asset/">
+        <link rel="canonical" href="https://SEU_DOMINIO/architecture/bloomberg_data_pipeline/">
       
       
+        <link rel="prev" href="../data_flow/">
+      
+      
+        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
       
       
       <link rel="icon" href="../../assets/logo_png.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Add new asset - LuxorASAP Onedrive Docs</title>
+        <title>Bloomberg Data Pipeline - LuxorASAP Onedrive Docs</title>
       
     
     
@@ -75,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bloomberg-data-pipeline" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add new asset
+              Bloomberg Data Pipeline
             
           </span>
         </div>
@@ -238,8 +247,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -250,11 +261,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -270,7 +281,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Arquitetura
@@ -284,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/file_tree/" class="md-nav__link">
+      <a href="../file_tree/" class="md-nav__link">
         
   
   
@@ -307,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/data_flow/" class="md-nav__link">
+      <a href="../data_flow/" class="md-nav__link">
         
   
   
@@ -327,10 +338,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../architecture/bloomberg_data_pipeline/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bloomberg Data Pipeline
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -341,6 +374,143 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-1-extracao-via-market_data_extractorpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 1 – Extração via market_data_extractor.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 1 – Extração via market_data_extractor.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modos-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modos de Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-datapoint-extracao-continua-bdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. --datapoint: Extração contínua (BDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-histdata-extracao-historica-bdh-bds" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. --histdata: Extração histórica (BDH + BDS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-2-integracao-via-market_data_loaderpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 2 – Integração via market_data_loader.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 2 – Integração via market_data_loader.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fontes-integradas-em-px_lastparquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fontes integradas em px_last.parquet:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformacoes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformações adicionais:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabelas-finais-geradas-em-luxorasapenrichedparquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas finais geradas em luxorasap/enriched/parquet:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1022,6 +1192,133 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-1-extracao-via-market_data_extractorpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 1 – Extração via market_data_extractor.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 1 – Extração via market_data_extractor.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modos-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modos de Execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-datapoint-extracao-continua-bdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. --datapoint: Extração contínua (BDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-histdata-extracao-historica-bdh-bds" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. --histdata: Extração histórica (BDH + BDS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-2-integracao-via-market_data_loaderpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 2 – Integração via market_data_loader.py
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 2 – Integração via market_data_loader.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fontes-integradas-em-px_lastparquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fontes integradas em px_last.parquet:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformacoes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformações adicionais:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabelas-finais-geradas-em-luxorasapenrichedparquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabelas finais geradas em luxorasap/enriched/parquet:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1037,9 +1334,136 @@
 
 
 
-  <h1>Add new asset</h1>
+<h1 id="bloomberg-data-pipeline">Bloomberg Data Pipeline<a class="headerlink" href="#bloomberg-data-pipeline" title="Permanent link">¶</a></h1>
+<p>Este documento descreve a arquitetura e o funcionamento do pipeline de extração de dados da Bloomberg utilizado no LuxorASAP. Ele cobre desde a extração via <code>blpAPI</code>, passando pelo armazenamento em <code>ADLS</code>, até a transformação e integração das tabelas finais.</p>
+<hr />
+<h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>flowchart TD
+  subgraph Bloomberg Data Pipeline
+    MDE[market_data_extractor.py]
+    MDE --&gt;|--datapoint| Raw1[px_last_raw + last_all_flds_raw]
+    MDE --&gt;|--histdata| Raw2[hist_px_last_raw + hist_all_flds_raw + holidays_raw]
+    Raw1 --&gt; Raw[ADLS: luxorasap/raw/parquet]
+    Raw2 --&gt; Raw
+    Raw --&gt; MDL[market_data_loader.py]
+    MDL --&gt; Enriched["ADLS: luxorasap/enriched/parquet (px_last, hist_px_last, holidays, last_all_flds, hist_all_flds)"]
+  end</code></pre>
+<hr />
+<h2 id="etapa-1-extracao-via-market_data_extractorpy">Etapa 1 – Extração via <code>market_data_extractor.py</code><a class="headerlink" href="#etapa-1-extracao-via-market_data_extractorpy" title="Permanent link">¶</a></h2>
+<p>O script <code>market_data_extractor.py</code> é o ponto inicial do pipeline, responsável por consultar dados da Bloomberg via <code>blpAPI</code> e salvar arquivos <code>.parquet</code> no ADLS em <code>luxorasap/raw/parquet</code>.</p>
+<h3 id="modos-de-execucao">Modos de Execução<a class="headerlink" href="#modos-de-execucao" title="Permanent link">¶</a></h3>
+<h4 id="1-datapoint-extracao-continua-bdp">1. <code>--datapoint</code>: Extração contínua (BDP)<a class="headerlink" href="#1-datapoint-extracao-continua-bdp" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>flowchart TD
+  subgraph Datapoint
+    MDEX["market_data_extractor.py"]
+    MDEX --&gt; A1["Leitura: historico_trades_ativos.xlsx (aba ativos)"]
+    MDEX --&gt; A2["Leitura: historico_trades_ativos.xlsx (aba asset_field_map)"]
+    A1 --&gt; C1{"Disable BDP = FALSE?"}
+    C1 --&gt;|Sim| Q1["BDP → px_last_raw.parquet"]
+    A2 --&gt; C2{"Last_Data = TRUE?"}
+    C2 --&gt;|Sim| Q2["BDP → last_all_flds_raw.parquet"]
+    Q1 &amp; Q2 --&gt; W1["Grava em luxorasap/raw/parquet"]
+  end</code></pre>
+<p>Este modo do <code>market_data_extractor.py</code> realiza chamadas contínuas à API BDP da Bloomberg para extrair os <strong>últimos preços</strong> (<code>px_last_raw</code>) e <strong>outros campos configurados</strong> (<code>last_all_flds_raw</code>).<br />
+A frequência da extração (day, hour, minute) e os ativos consultados são definidos nas abas <code>ativos</code> e <code>asset_field_map</code> do Excel <code>historico_trades_ativos.xlsx</code>.<br />
+O script também contabiliza os <strong>hits</strong> consumidos (máximo de 500 mil por dia).</p>
+<h4 id="2-histdata-extracao-historica-bdh-bds">2. <code>--histdata</code>: Extração histórica (BDH + BDS)<a class="headerlink" href="#2-histdata-extracao-historica-bdh-bds" title="Permanent link">¶</a></h4>
+<p><pre class="mermaid"><code>flowchart TD
+  subgraph Histdata
+    MDEX["market_data_extractor.py"]
+    MDEX --&gt; B1["Leitura: historico_trades_ativos.xlsx (aba ativos)"]
+    MDEX --&gt; B2["Leitura: historico_trades_ativos.xlsx (aba asset_field_map)"]
+    B1 --&gt; C3{"Hist_Price = TRUE?"}
+    C3 --&gt;|Sim| Q3["BDH → hist_px_last_raw.parquet"]
+    B2 --&gt; C4{"Historical_Data = TRUE?"}
+    C4 --&gt;|Sim| Q4["BDH → hist_all_flds_raw.parquet"]
+    MDEX --&gt; Q5["BDS → holidays_raw.parquet"]
+    Q3 &amp; Q4 &amp; Q5 --&gt; W2["Grava em luxorasap/raw/parquet"]
+  end</code></pre>
+Este modo executa <strong>consultas únicas</strong> para baixar <strong>preços históricos</strong> (<code>hist_px_last_raw</code>), <strong>campos históricos</strong> (<code>hist_all_flds_raw</code>) e <strong>feriados de mercado</strong> (<code>holidays_raw</code>).<br />
+As configurações são feitas no mesmo Excel, nas colunas <code>Hist_Price</code>, <code>Historical_Data</code> e <code>Start_Date</code>.<br />
+Esse modo não é contínuo e não possui limitação explícita de uso por parte da Bloomberg.</p>
+<h3 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Função BBG</th>
+<th>Tabelas de Saída</th>
+<th>Fonte de Frequência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--datapoint</code></td>
+<td><strong>BDP</strong></td>
+<td><code>px_last_raw</code>, <code>last_all_flds_raw</code></td>
+<td>aba <strong>ativos</strong> e <strong>asset_field_map</strong></td>
+<td>Consulta contínua (day/hour/minute). Monitora limite de 500 k <em>hits</em>/dia</td>
+</tr>
+<tr>
+<td><code>--histdata</code></td>
+<td><strong>BDH</strong> &amp; <strong>BDS</strong></td>
+<td><code>hist_px_last_raw</code>, <code>hist_all_flds_raw</code>, <code>holidays_raw</code></td>
+<td>abas <strong>ativos</strong> e <strong>asset_field_map</strong></td>
+<td>Execução pontual (batch). Sem limite explícito</td>
+</tr>
+</tbody>
+</table>
+<h2 id="etapa-2-integracao-via-market_data_loaderpy">Etapa 2 – Integração via <code>market_data_loader.py</code><a class="headerlink" href="#etapa-2-integracao-via-market_data_loaderpy" title="Permanent link">¶</a></h2>
+<p>Após a extração, o script <code>market_data_loader.py</code> observa alterações nas pastas <code>raw/parquet</code> e inicia a transformação e integração dos dados.</p>
+<pre class="mermaid"><code>flowchart TD
+  subgraph Loader
+    ML["market_data_loader.py"]
+    ML --&gt; M1["Monitora: luxorasap/raw/parquet"]
+    M1 --&gt; px_raw["px_last_raw.parquet"]
+    M1 --&gt; hist_px["hist_px_last_raw.parquet"]
+    M1 --&gt; fld_raw["last_all_flds_raw.parquet"]
+    M1 --&gt; hist_fld["hist_all_flds_raw.parquet"]
+    M1 --&gt; hol_raw["holidays_raw.parquet"]
 
+    subgraph Enriquecimento
+      px_raw --&gt; Merge["Merge com fontes externas"]
+      Merge --&gt; px["px_last.parquet"]
+      hist_px --&gt; Ajuste["Corrige FIAs via IBOV"]
+      Ajuste --&gt; hpx["hist_px_last.parquet"]
+      fld_raw --&gt; lfld["last_all_flds.parquet"]
+      hist_fld --&gt; hfld["hist_all_flds.parquet"]
+      hol_raw --&gt; hol["holidays.parquet"]
+    end
 
+    subgraph Output
+      px &amp; hpx &amp; lfld &amp; hfld &amp; hol --&gt; E["luxorasap/enriched/parquet"]
+    end
+  end</code></pre>
+<p>Ao identificar novos arquivos, ele integra os dados da Bloomberg com outras fontes de preço internas, <strong>corrige preços dos FIAs</strong> com base no IBOV<br />
+e gera as tabelas finais enriquecidas (<code>px_last</code>, <code>hist_px_last</code>, <code>holidays</code>, <code>last_all_flds</code>, <code>hist_all_flds</code>) na pasta <code>luxorasap/enriched/parquet</code>.</p>
+<h3 id="fontes-integradas-em-px_lastparquet">Fontes integradas em <code>px_last.parquet</code>:<a class="headerlink" href="#fontes-integradas-em-px_lastparquet" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>px_last_raw</code> (Bloomberg via BDP)</li>
+<li><code>hist_non_bbg_px_last</code></li>
+<li><code>custom_prices</code></li>
+<li><code>custom_funds_quotas</code></li>
+<li><code>all_funds_quotas</code></li>
+<li><code>hist_vc_px_last</code></li>
+</ul>
+<h3 id="transformacoes-adicionais">Transformações adicionais:<a class="headerlink" href="#transformacoes-adicionais" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>FIAs</strong>: os preços em <code>hist_px_last_raw</code> são corrigidos até o dia atual com base no IBOV.</li>
+</ul>
+<h3 id="tabelas-finais-geradas-em-luxorasapenrichedparquet">Tabelas finais geradas em <code>luxorasap/enriched/parquet</code>:<a class="headerlink" href="#tabelas-finais-geradas-em-luxorasapenrichedparquet" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>px_last.parquet</code>: últimos preços de todos os ativos.</li>
+<li><code>hist_px_last.parquet</code>: históricos ajustados (com correções).</li>
+<li><code>holidays.parquet</code>: feriados integrados.</li>
+<li><code>last_all_flds.parquet</code>: campos atuais de ativos.</li>
+<li><code>hist_all_flds.parquet</code>: campos históricos de ativos.</li>
+</ul>
+<hr />
+<h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">¶</a></h2>
+<p>Este pipeline garante a extração estruturada e robusta dos dados da Bloomberg, respeitando as limitações da API e unificando múltiplas fontes de preço em uma camada final confiável. O processo está preparado para rodar de forma contínua e automática, assegurando que os dados estejam sempre atualizados para alimentar modelos, dashboards e análises internas da Luxor.</p>
+<hr />
 
 
 
