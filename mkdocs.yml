@@ -7,19 +7,17 @@ copyright: "© Luxor Group"
 # ──────────  TEMA (Material) ─────────
 theme:
   name: material
-  language: pt-BR
-  logo: assets/logo_png.png         # opcional
-  favicon: assets/logo_png.png   # opcional
-  features:
-    - navigation.sections             # menu lateral em seções
-    - navigation.instant              # navegação sem recarregar
-    - content.code.copy               # botão "Copiar código"
-    - search.highlight                # destaque de resultado
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: default
+      primary: blue               # substitua por 'teal' ou outro se preferir
+      accent: orange
+      # Toggle permanece apenas visual, não muda o esquema
+      toggle:
+        icon: material/weather-night
+        name: Alternar Dark Mode
+
+extra_css:
+  - stylesheets/custom.css
 
 # ───────────  NAVEGAÇÃO  ────────────
 nav:
@@ -55,6 +53,7 @@ nav:
       - source_bases_updater.py: modules/source_bases_updater.md
       - luxorDB_datareader.py: modules/luxorDB_datareader.md
       - luxorDB_dataloader.py: modules/luxorDB_dataloader.md
+  - Planilhas: planilhas/planilhas.md
 
 
 # ───────  EXTENSÕES MARKDOWN  ───────
@@ -75,6 +74,7 @@ markdown_extensions:
 
 # ─────────────  PLUG-INS  ───────────
 plugins:
+  - macros
   - search                       # busca interna
   - mkdocstrings:
       handlers:
