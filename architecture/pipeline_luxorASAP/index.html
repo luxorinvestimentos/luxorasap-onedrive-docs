@@ -10,24 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://SEU_DOMINIO/modules/source_bases/scripts/custom_funds_quotas/">
+        <link rel="canonical" href="https://SEU_DOMINIO/architecture/pipeline_luxorASAP/">
       
       
+        <link rel="prev" href="../bloomberg_data_pipeline/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>custom_funds_quotas_updater.md - LuxorASAP Onedrive Docs</title>
+        <title>Lógica de Funcionamento – run_luxorASAP.py - LuxorASAP Onedrive Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#custom_funds_quotas_updatermd" class="md-skip">
+        <a href="#pipeline-run_luxorasap" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="LuxorASAP Onedrive Docs" class="md-header__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
+    <a href="../.." title="LuxorASAP Onedrive Docs" class="md-header__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo_png.png" alt="logo">
+  <img src="../../assets/logo_png.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              custom_funds_quotas_updater.md
+              Lógica de Funcionamento – run_luxorASAP.py
             
           </span>
         </div>
@@ -205,9 +209,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="LuxorASAP Onedrive Docs" class="md-nav__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
+    <a href="../.." title="LuxorASAP Onedrive Docs" class="md-nav__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo_png.png" alt="logo">
+  <img src="../../assets/logo_png.png" alt="logo">
 
     </a>
     LuxorASAP Onedrive Docs
@@ -222,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -241,18 +245,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -268,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Arquitetura
@@ -282,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/file_tree/" class="md-nav__link">
+      <a href="../file_tree/" class="md-nav__link">
         
   
   
@@ -305,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/data_flow/" class="md-nav__link">
+      <a href="../data_flow/" class="md-nav__link">
         
   
   
@@ -328,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/bloomberg_data_pipeline/" class="md-nav__link">
+      <a href="../bloomberg_data_pipeline/" class="md-nav__link">
         
   
   
@@ -348,10 +354,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_luxorASAP/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pipeline run_luxorASAP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -362,6 +390,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-operacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de Operação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalhes-do-processamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalhes do Processamento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalhes do Processamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-monitoramento-e-atualizacao-da-planilha-mestra" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Monitoramento e Atualização da Planilha-Mestra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-processamento-de-trades-e-posicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Processamento de Trades e Posições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deteccao-de-alteracoes-e-modo-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Detecção de Alterações e Modo Reset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modulos-auxiliares-para-processamento-de-trades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Módulos Auxiliares para Processamento de Trades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-persistencia-das-posicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Persistência das posições
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -457,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/portfolio_builder/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/portfolio_builder/" class="md-nav__link">
         
   
   
@@ -480,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/return_calculator/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/return_calculator/" class="md-nav__link">
         
   
   
@@ -503,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/cash_calculator/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/cash_calculator/" class="md-nav__link">
         
   
   
@@ -526,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/btg_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/btg_data_extraction/" class="md-nav__link">
         
   
   
@@ -549,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/asset_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/asset_data_extraction/" class="md-nav__link">
         
   
   
@@ -572,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/historical_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/historical_data_extraction/" class="md-nav__link">
         
   
   
@@ -595,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/leitor_carteira_excel/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/leitor_carteira_excel/" class="md-nav__link">
         
   
   
@@ -618,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/onedrive_file_redirect/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/onedrive_file_redirect/" class="md-nav__link">
         
   
   
@@ -687,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hist_concentration_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/hist_concentration_updater/" class="md-nav__link">
         
   
   
@@ -710,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom_funds_quotas_updater.md" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/custom_funds_quotas_updater.md" class="md-nav__link">
         
   
   
@@ -733,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../non_bbg_data_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/non_bbg_data_updater/" class="md-nav__link">
         
   
   
@@ -756,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daily_pnl_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/daily_pnl_updater/" class="md-nav__link">
         
   
   
@@ -779,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../historical_quotas_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/historical_quotas_updater/" class="md-nav__link">
         
   
   
@@ -802,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../risk_metrics_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/risk_metrics_updater/" class="md-nav__link">
         
   
   
@@ -825,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../us_cash_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/us_cash_updater/" class="md-nav__link">
         
   
   
@@ -848,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaps_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/swaps_updater/" class="md-nav__link">
         
   
   
@@ -879,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../run_luxorASAP/" class="md-nav__link">
+      <a href="../../modules/run_luxorASAP/" class="md-nav__link">
         
   
   
@@ -902,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../market_data_extractor/" class="md-nav__link">
+      <a href="../../modules/market_data_extractor/" class="md-nav__link">
         
   
   
@@ -925,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../market_data_loader/" class="md-nav__link">
+      <a href="../../modules/market_data_loader/" class="md-nav__link">
         
   
   
@@ -948,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source_bases_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases_updater/" class="md-nav__link">
         
   
   
@@ -971,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../luxorDB_datareader/" class="md-nav__link">
+      <a href="../../modules/luxorDB_datareader/" class="md-nav__link">
         
   
   
@@ -994,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../luxorDB_dataloader/" class="md-nav__link">
+      <a href="../../modules/luxorDB_dataloader/" class="md-nav__link">
         
   
   
@@ -1024,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../planilhas/planilhas/" class="md-nav__link">
+      <a href="../../planilhas/planilhas/" class="md-nav__link">
         
   
   
@@ -1084,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/add_new_asset/" class="md-nav__link">
+      <a href="../../how_to/add_new_asset/" class="md-nav__link">
         
   
   
@@ -1107,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/create_price_series/" class="md-nav__link">
+      <a href="../../how_to/create_price_series/" class="md-nav__link">
         
   
   
@@ -1157,11 +1283,80 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#title-custom_funds_quotas_updaterpy" class="md-nav__link">
+  <a href="#visao-geral" class="md-nav__link">
     <span class="md-ellipsis">
-      title: custom_funds_quotas_updater.py
+      Visão Geral
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-operacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de Operação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalhes-do-processamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalhes do Processamento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalhes do Processamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-monitoramento-e-atualizacao-da-planilha-mestra" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Monitoramento e Atualização da Planilha-Mestra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-processamento-de-trades-e-posicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Processamento de Trades e Posições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deteccao-de-alteracoes-e-modo-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Detecção de Alterações e Modo Reset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modulos-auxiliares-para-processamento-de-trades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Módulos Auxiliares para Processamento de Trades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-persistencia-das-posicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Persistência das posições
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1181,51 +1376,83 @@
 
 
 
-<h1 id="custom_funds_quotas_updatermd">custom_funds_quotas_updater.md<a class="headerlink" href="#custom_funds_quotas_updatermd" title="Permanent link">¶</a></h1>
-<hr />
-<h2 id="title-custom_funds_quotas_updaterpy">title: custom_funds_quotas_updater.py<a class="headerlink" href="#title-custom_funds_quotas_updaterpy" title="Permanent link">¶</a></h2>
-<h1 id="custom_funds_quotas_updaterpy"><code>custom_funds_quotas_updater.py</code><a class="headerlink" href="#custom_funds_quotas_updaterpy" title="Permanent link">¶</a></h1>
-<p>Gera séries de cotas para portfolios customizados da Luxor.</p>
+<h1 id="pipeline-run_luxorasap">Pipeline run_luxorASAP<a class="headerlink" href="#pipeline-run_luxorasap" title="Permanent link">¶</a></h1>
+<p>Este documento detalha o funcionamento do script <code>run_luxorASAP.py</code>, que atua como o orquestrador, garantindo a propagação de input de dados dos ativos, trades e o recálculo contínuo das posições dos fundos.</p>
+<h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">¶</a></h2>
+<p>O <code>run_luxorASAP.py</code> opera em um loop contínuo ao longo do dia, monitorando alterações em arquivos-chave e processando dados para manter as informações financeiras atualizadas. Ele é responsável por:</p>
+<ol>
+<li><strong>Monitorar e processar a planilha <code>historico_trades_ativos.xlsx</code></strong>: Propaga as entradas desta planilha para tabelas <code>.parquet</code> no data lake.</li>
+<li><strong>Processar trades e recalcular posições</strong>: Garante que as posições dos fundos estejam sempre atualizadas com base nos trades registrados.</li>
+</ol>
+<h2 id="fluxo-de-operacao">Fluxo de Operação<a class="headerlink" href="#fluxo-de-operacao" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    subgraph "**Processar historico_trades_ativos.xlsx**"
+    direction LR
+      B{Monitora: historico_trades_ativos.xlsx};
+      B -- Mudou? --&gt; C[Ler abas da planilha];
+      C --&gt; D[Processar para tabelas parquet];
+      D --&gt; E[(Salvar em luxorasap/enriched/parquet)];
+      E --&gt;|"10s"| B;
+    end</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    subgraph "**Processar Trades**"
+    direction LR
+      G{Verificar novos trades em enriched/trades.parquet};
+      G -- Novos trades ou Reset? --&gt; H[Processar Trades];
+      H --&gt; I[Gerar tabelas de posição];
+      I --&gt; J[(Salvar em luxorasap/enriched/parquet)];
+      I --&gt; K["Salvar estado dos módulos em funds_data.pickle"];
+      I --&gt;|"10s"| G;
+    end
+</code></pre>
+<h2 id="detalhes-do-processamento">Detalhes do Processamento<a class="headerlink" href="#detalhes-do-processamento" title="Permanent link">¶</a></h2>
+<h3 id="1-monitoramento-e-atualizacao-da-planilha-mestra">1. Monitoramento e Atualização da Planilha-Mestra<a class="headerlink" href="#1-monitoramento-e-atualizacao-da-planilha-mestra" title="Permanent link">¶</a></h3>
+<p>Através de uma instância do <code>luxorDB_dataloader</code>, o script verifica continuamente se o horário da última modificação da planilha <code>source_bases/historico_trades_ativos.xlsx</code> foi alterado.</p>
+<ul>
+<li><strong>Se houver alteração</strong>:<ul>
+<li>As abas da planilha são lidas, processadas e salvas como arquivos <code>.parquet</code> na pasta <code>luxorasap/enriched/parquet</code>.</li>
+<li><code>boletas</code> se transforma em <code>trades.parquet</code>.</li>
+<li><code>ativos</code> se transforma em <code>assets.parquet</code>.</li>
+<li><code>VCs_prices</code> se transforma em <code>hist_vc_px_last.parquet</code>.</li>
+<li><code>asset_field_map</code> se transforma em <code>asset_field_map.parquet</code>.</li>
+<li><code>field_map</code> se transforma em <code>field_map.parquet</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-processamento-de-trades-e-posicoes">2. Processamento de Trades e Posições<a class="headerlink" href="#2-processamento-de-trades-e-posicoes" title="Permanent link">¶</a></h3>
+<p>A cada 10 segundos, o script verifica a existência de novos trades na tabela <code>enriched/trades.parquet</code>.</p>
+<ul>
+<li><strong>Primeira execução do dia</strong>: O script roda no <strong>modo reset</strong>, reprocessando todas as transações da tabela <code>trades</code> e gerando todas as tabelas de posição do zero.</li>
+<li><strong>Novos trades ou alterações</strong>: Se novos trades forem identificados ou se houver alterações em trades já processados (data, quantidade ou preço da boleta), o processamento é acionado.</li>
+<li><strong>Tabelas de saída</strong>: As seguintes tabelas são geradas ou atualizadas na pasta <code>luxorasap/enriched/parquet</code>:<ul>
+<li><code>last_positions.parquet</code></li>
+<li><code>hist_positions.parquet</code></li>
+<li><code>cash_movements.parquet</code></li>
+<li><code>hist_positions_by_bank.parquet</code></li>
+<li><code>last_positions_by_bank.parquet</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-deteccao-de-alteracoes-e-modo-reset">3. Detecção de Alterações e Modo Reset<a class="headerlink" href="#3-deteccao-de-alteracoes-e-modo-reset" title="Permanent link">¶</a></h3>
+<p>O script também faz uma checagem dos trades já processados. Se for detectada qualquer alteração na <strong>data</strong>, <strong>quantidade</strong> ou <strong>preço</strong> de uma boleta existente, a flag de <code>reset</code> é ativada para a próxima execução. Isso garante que todos os trades sejam reprocessados, assegurando a consistência dos dados.</p>
+<h3 id="4-modulos-auxiliares-para-processamento-de-trades">4. Módulos Auxiliares para Processamento de Trades<a class="headerlink" href="#4-modulos-auxiliares-para-processamento-de-trades" title="Permanent link">¶</a></h3>
+<p>Para o processamento dos trades, o <code>run_luxorASAP.py</code> utiliza os seguintes módulos auxiliares:</p>
+<ul>
+<li><strong><code>fund.py</code></strong>: Fornece a estrutura para definir as contas bancárias (<code>bank_accounts</code>) e os ativos (<code>assets</code>) que cada fundo possui, além de gerenciar os trades que o fundo precisa processar.</li>
+<li><strong><code>asset.py</code></strong>: Executa o processamento individual de cada trade, controlando os trades de cada ativo e quais já foram processados.</li>
+<li><strong><code>bank_account.py</code></strong>: Possui a estrutura para organizar todos os ativos que estão associados a uma conta bancária específica. É responsável por processar os trades na visão dessa conta bancária (gerando as tabelas <code>*_by_bank</code>) e contém a lógica para processar boletas de transferência de ativos, aquela cujo <code>op_type</code> é "transf ativos".</li>
+</ul>
+<h3 id="5-persistencia-das-posicoes">5. Persistência das posições<a class="headerlink" href="#5-persistencia-das-posicoes" title="Permanent link">¶</a></h3>
+<p>Ao final de cada execução, o <code>run_luxorASAP</code> armazena os dados internos desses submódulos (<code>fund.py</code>, <code>asset.py</code>, <code>bank_account.py</code>) em um arquivo <code>.pickle</code> salvo em <code>LuxorASAP/funds_data</code>. Isso permite que o script retome seu estado ao ser religado. No entanto, a flag --reset está sendo usada por padrão. É possível alterar a main do script para permiter essa retomada de estado sem reprocessar tudo.</p>
 
 
-<div class="doc doc-object doc-module">
-
-
-
-<a id="source_bases.scripts.custom_funds_quotas_updater"></a>
-    <div class="doc doc-contents first">
 
 
 
 
 
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-
-
-
-
-
+  
+  
 
 
 
@@ -1272,10 +1499,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

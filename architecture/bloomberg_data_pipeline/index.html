@@ -16,7 +16,7 @@
         <link rel="prev" href="../data_flow/">
       
       
-        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
+        <link rel="next" href="../pipeline_luxorASAP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -504,6 +504,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline_luxorASAP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipeline run_luxorASAP
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1436,14 +1459,13 @@
 <hr />
 <h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">¶</a></h2>
 <pre class="mermaid"><code>flowchart TD
-  subgraph Bloomberg Data Pipeline
+  subgraph **Bloomberg Data Pipeline**
     MDE[market_data_extractor.py]
     MDE --&gt;|--datapoint| Raw1[px_last_raw + last_all_flds_raw]
     MDE --&gt;|--histdata| Raw2[hist_px_last_raw + hist_all_flds_raw + holidays_raw]
     Raw1 --&gt; Raw[ADLS: luxorasap/raw/parquet]
     Raw2 --&gt; Raw
-    Raw --&gt; MDL[market_data_loader.py]
-    MDL --&gt; Enriched["ADLS: luxorasap/enriched/parquet (px_last, hist_px_last, holidays, last_all_flds, hist_all_flds)"]
+    Raw --&gt;|market_data_loader.py| Enriched[("px_last, hist_px_last, holidays, last_all_flds, hist_all_flds&lt;br&gt;(luxorasap/enriched/parquet)")]
   end</code></pre>
 <hr />
 <h2 id="etapa-1-extracao-via-market_data_extractorpy">Etapa 1 – Extração via <code>market_data_extractor.py</code><a class="headerlink" href="#etapa-1-extracao-via-market_data_extractorpy" title="Permanent link">¶</a></h2>
@@ -1451,7 +1473,7 @@
 <h3 id="modos-de-execucao">Modos de Execução<a class="headerlink" href="#modos-de-execucao" title="Permanent link">¶</a></h3>
 <h4 id="1-datapoint-extracao-continua-bdp">1. <code>--datapoint</code>: Extração contínua (BDP)<a class="headerlink" href="#1-datapoint-extracao-continua-bdp" title="Permanent link">¶</a></h4>
 <pre class="mermaid"><code>flowchart TD
-  subgraph Datapoint
+  subgraph **Datapoint**
     MDEX["market_data_extractor.py"]
     MDEX --&gt; A1["Leitura: historico_trades_ativos.xlsx (aba ativos)"]
     MDEX --&gt; A2["Leitura: historico_trades_ativos.xlsx (aba asset_field_map)"]
@@ -1466,7 +1488,7 @@ A frequência da extração (day, hour, minute) e os ativos consultados são def
 O script também contabiliza os <strong>hits</strong> consumidos (máximo de 500 mil por dia).</p>
 <h4 id="2-histdata-extracao-historica-bdh-bds">2. <code>--histdata</code>: Extração histórica (BDH + BDS)<a class="headerlink" href="#2-histdata-extracao-historica-bdh-bds" title="Permanent link">¶</a></h4>
 <p><pre class="mermaid"><code>flowchart TD
-  subgraph Histdata
+  subgraph **Histdata**
     MDEX["market_data_extractor.py"]
     MDEX --&gt; B1["Leitura: historico_trades_ativos.xlsx (aba ativos)"]
     MDEX --&gt; B2["Leitura: historico_trades_ativos.xlsx (aba asset_field_map)"]
@@ -1511,7 +1533,7 @@ Esse modo não é contínuo e não possui limitação explícita de uso por part
 <h2 id="etapa-2-integracao-via-market_data_loaderpy">Etapa 2 – Integração via <code>market_data_loader.py</code><a class="headerlink" href="#etapa-2-integracao-via-market_data_loaderpy" title="Permanent link">¶</a></h2>
 <p>Após a extração, o script <code>market_data_loader.py</code> observa alterações nas pastas <code>raw/parquet</code> e inicia a transformação e integração dos dados.</p>
 <pre class="mermaid"><code>flowchart TD
-  subgraph Loader
+  subgraph **Loader**
     ML["market_data_loader.py"]
     ML --&gt; M1["Monitora: luxorasap/raw/parquet"]
     M1 --&gt; px_raw["px_last_raw.parquet"]
@@ -1531,7 +1553,7 @@ Esse modo não é contínuo e não possui limitação explícita de uso por part
     end
 
     subgraph Output
-      px &amp; hpx &amp; lfld &amp; hfld &amp; hol --&gt; E["luxorasap/enriched/parquet"]
+      px &amp; hpx &amp; lfld &amp; hfld &amp; hol --&gt; E[("luxorasap/enriched/parquet")]
     end
   end</code></pre>
 <p>Ao identificar novos arquivos, ele integra os dados da Bloomberg com outras fontes de preço internas, <strong>corrige preços dos FIAs</strong> com base no IBOV<br />
