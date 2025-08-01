@@ -9,14 +9,13 @@ Este documento descreve a arquitetura e o funcionamento do pipeline de extraçã
 
 ```mermaid
 flowchart TD
-  subgraph Bloomberg Data Pipeline
+  subgraph **Bloomberg Data Pipeline**
     MDE[market_data_extractor.py]
     MDE -->|--datapoint| Raw1[px_last_raw + last_all_flds_raw]
     MDE -->|--histdata| Raw2[hist_px_last_raw + hist_all_flds_raw + holidays_raw]
     Raw1 --> Raw[ADLS: luxorasap/raw/parquet]
     Raw2 --> Raw
-    Raw --> MDL[market_data_loader.py]
-    MDL --> Enriched["ADLS: luxorasap/enriched/parquet (px_last, hist_px_last, holidays, last_all_flds, hist_all_flds)"]
+    Raw -->|market_data_loader.py| Enriched[("px_last, hist_px_last, holidays, last_all_flds, hist_all_flds<br>(luxorasap/enriched/parquet)")]
   end
 ```
 
@@ -32,7 +31,7 @@ O script `market_data_extractor.py` é o ponto inicial do pipeline, responsável
 
 ```mermaid
 flowchart TD
-  subgraph Datapoint
+  subgraph **Datapoint**
     MDEX["market_data_extractor.py"]
     MDEX --> A1["Leitura: historico_trades_ativos.xlsx (aba ativos)"]
     MDEX --> A2["Leitura: historico_trades_ativos.xlsx (aba asset_field_map)"]
@@ -53,7 +52,7 @@ O script também contabiliza os **hits** consumidos (máximo de 500 mil por dia)
 
 ```mermaid
 flowchart TD
-  subgraph Histdata
+  subgraph **Histdata**
     MDEX["market_data_extractor.py"]
     MDEX --> B1["Leitura: historico_trades_ativos.xlsx (aba ativos)"]
     MDEX --> B2["Leitura: historico_trades_ativos.xlsx (aba asset_field_map)"]
@@ -83,7 +82,7 @@ Após a extração, o script `market_data_loader.py` observa alterações nas pa
 
 ```mermaid
 flowchart TD
-  subgraph Loader
+  subgraph **Loader**
     ML["market_data_loader.py"]
     ML --> M1["Monitora: luxorasap/raw/parquet"]
     M1 --> px_raw["px_last_raw.parquet"]
@@ -103,7 +102,7 @@ flowchart TD
     end
 
     subgraph Output
-      px & hpx & lfld & hfld & hol --> E["luxorasap/enriched/parquet"]
+      px & hpx & lfld & hfld & hol --> E[("luxorasap/enriched/parquet")]
     end
   end
 ```
