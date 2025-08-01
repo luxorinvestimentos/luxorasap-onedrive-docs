@@ -22,6 +22,6 @@ Esta documentação está organizada nas seguintes seções:
 
 ## Interação via ChatGPT
 
-Após publicar em GitHub Pages (por exemplo, `https://luxorgroup.github.io/luxorASAP-docs/`), copie a URL e cole em uma sessão do ChatGPT. O modelo carregará a documentação em tempo real e responderá perguntas sobre o sistema.
+Após publicar em GitHub Pages (por exemplo, `https://luxorinvestimentos.github.io/luxorasap-onedrive-docs/`), copie a URL e cole em uma sessão do ChatGPT. O modelo carregará a documentação em tempo real e responderá perguntas sobre o sistema.
 
 ---

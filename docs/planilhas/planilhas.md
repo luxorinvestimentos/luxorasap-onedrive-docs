@@ -45,11 +45,11 @@ Esta página descreve em detalhes as principais planilhas utilizadas pelo **Luxo
   `carteira_online/production/bases_output/base_portfolios.xlsx`
 
 - **Descrição**  
-  Base gerencial sem agregações, com posições e quantidades por fundo, gerada ao final do pregão pelo `portfolio_builder.py`.
+  Base gerencial sem agregações, com posições e quantidades por fundo, gerada durante o dia pelo `portfolio_builder.py`.
 
 - **Interações Principais**  
   - `portfolio_builder.py`: cria e salva nesta pasta.  
-  - Copiada para `carteiras_luxor_historico/bases_completas/` diariamente.  
+  - Copiada para `carteiras_luxor_historico/bases_completas/` diariamente ao final do pregão.  
   - `risk_metrics_updater.py` e `hist_concentration_updater.py`: consomem para cálculo de métricas.
 
 ---

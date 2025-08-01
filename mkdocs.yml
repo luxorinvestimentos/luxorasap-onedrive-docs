@@ -9,12 +9,17 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: blue               # substitua por 'teal' ou outro se preferir
+      primary: black               # substitua por 'teal' ou outro se preferir
       accent: orange
       # Toggle permanece apenas visual, não muda o esquema
       toggle:
         icon: material/weather-night
         name: Alternar Dark Mode
+
+# colocando imagem de logo
+  logo: assets/logo_png.png
+  #favicon: assets/favicon.ico
+
 
 extra_css:
   - stylesheets/custom.css
@@ -54,6 +59,10 @@ nav:
       - luxorDB_datareader.py: modules/luxorDB_datareader.md
       - luxorDB_dataloader.py: modules/luxorDB_dataloader.md
   - Planilhas: planilhas/planilhas.md
+  - How To:
+      - Adicionar novo ativo: how_to/add_new_asset.md
+      - Criar série de preços: how_to/create_price_series.md
+
 
 
 # ───────  EXTENSÕES MARKDOWN  ───────
