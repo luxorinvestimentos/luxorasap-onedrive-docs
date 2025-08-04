@@ -33,6 +33,7 @@ nav:
       - Data-flow: architecture/data_flow.md
       - Bloomberg Data Pipeline: architecture/bloomberg_data_pipeline.md
       - Pipeline run_luxorASAP: architecture/pipeline_luxorASAP.md
+      - Pipeline carteira online: architecture/pipeline_carteira_online.md
   - Módulos:
       - carteira_online.production:
           - portfolio_builder.py: modules/carteira_online/production/portfolio_builder.md

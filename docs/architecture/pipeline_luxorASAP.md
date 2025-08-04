@@ -20,11 +20,12 @@ O `run_luxorASAP.py` opera em um loop contínuo ao longo do dia, monitorando alt
 flowchart TD
     subgraph "**Processar historico_trades_ativos.xlsx**"
     direction LR
-      B{Monitora: historico_trades_ativos.xlsx};
-      B -- Mudou? --> C[Ler abas da planilha];
+      B[Monitora: historico_trades_ativos.xlsx];
+      B --> F{"Mudou?"};
+      F -- Sim --> C[Ler abas da planilha];
+      F -->|"10s"| B;
       C --> D[Processar para tabelas parquet];
       D --> E[(Salvar em luxorasap/enriched/parquet)];
-      E -->|"10s"| B;
     end
 ```
 
@@ -32,12 +33,13 @@ flowchart TD
 flowchart TD
     subgraph "**Processar Trades**"
     direction LR
-      G{Verificar novos trades em enriched/trades.parquet};
-      G -- Novos trades ou Reset? --> H[Processar Trades];
+      G[Verificar novos trades em enriched/trades.parquet];
+      G --> L{"Novos trades<br> ou Reset?"};
+      L -- Sim --> H[Processar Trades];
+      L -->|"10s"| G;
       H --> I[Gerar tabelas de posição];
       I --> J[(Salvar em luxorasap/enriched/parquet)];
-      I --> K["Salvar estado dos módulos em funds_data.pickle"];
-      I -->|"10s"| G;
+      I --> K["Salvar estado<br>dos módulos em funds_data.pickle"];
     end
     
 ```
