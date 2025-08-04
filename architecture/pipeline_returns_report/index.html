@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://SEU_DOMINIO/architecture/data_flow/">
+        <link rel="canonical" href="https://SEU_DOMINIO/architecture/pipeline_returns_report/">
       
       
-        <link rel="prev" href="../file_tree/">
+        <link rel="prev" href="../pipeline_carteira_online/">
       
       
-        <link rel="next" href="../bloomberg_data_pipeline/">
+        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Data-flow - LuxorASAP Onedrive Docs</title>
+        <title>Pipeline relatório de retornos - LuxorASAP Onedrive Docs</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#arquitetura-pipeline-do-relatorio-de-retornos" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data-flow
+              Pipeline relatório de retornos
             
           </span>
         </div>
@@ -303,37 +308,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Data-flow
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -394,6 +368,197 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pipeline relatório de retornos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipeline relatório de retornos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-visao-geral-do-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Visão Geral do Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entradas-e-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Entradas e Configuração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Entradas e Configuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arquivos-de-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Arquivos de Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuracao-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Configuração Interna
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-logica-de-calculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lógica de Cálculo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Lógica de Cálculo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-retorno-diario-1d-atribuicao-de-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Retorno Diário (1D) - Atribuição de Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-cota-gerencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Cota Gerencial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-retornos-mtd-e-ytd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Retornos MTD e YTD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Benchmarks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ordenacao-do-relatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Ordenação do Relatório
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-exportando-as-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Exportando as bases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1179,6 +1344,142 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-visao-geral-do-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Visão Geral do Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entradas-e-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Entradas e Configuração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Entradas e Configuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arquivos-de-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Arquivos de Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuracao-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Configuração Interna
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-logica-de-calculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lógica de Cálculo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Lógica de Cálculo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-retorno-diario-1d-atribuicao-de-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Retorno Diário (1D) - Atribuição de Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-cota-gerencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Cota Gerencial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-retornos-mtd-e-ytd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Retornos MTD e YTD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Benchmarks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ordenacao-do-relatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Ordenação do Relatório
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-exportando-as-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Exportando as bases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1194,9 +1495,122 @@
 
 
 
-  <h1>Data-flow</h1>
+<h1 id="arquitetura-pipeline-do-relatorio-de-retornos">Arquitetura: Pipeline do Relatório de Retornos<a class="headerlink" href="#arquitetura-pipeline-do-relatorio-de-retornos" title="Permanent link">¶</a></h1>
+<p>Este documento detalha o funcionamento do script <code>return_calculator.py</code>, que atua calculando a cota gerencial diária, além dos retornos 1D, MTD e YTD dos portfólios para atualização do relatório de retornos diários no Power BI.</p>
+<hr />
+<h2 id="1-visao-geral-do-pipeline">1. Visão Geral do Pipeline<a class="headerlink" href="#1-visao-geral-do-pipeline" title="Permanent link">¶</a></h2>
+<p>O script orquestra a leitura das bases gerenciais, o cálculo de cotas e retornos, e a geração dos outputs que alimentam o Power BI.</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TD
+    subgraph "**Inputs**"
+        direction LR
+        A["base_portfolios.xlsx&lt;br&gt;(Gerado Hoje)"]
+        B["base_portfolios_Y-M-D.xlsx&lt;br&gt;(Dia Anterior)"]
+    end
 
+    subgraph "**Processamento**"
+        C["return_calculator.py"]
+    end
 
+    subgraph "**Outputs**"
+        direction LR
+        D["historical_return.xlsx&lt;br&gt;(/bases_historicas/)"]
+        E["historical_return.xlsx&lt;br&gt;(Final para PBI)"]
+    end
+
+    A --&gt; C
+    B --&gt; C
+    C --&gt; D
+    C --&gt; E</code></pre>
+</div>
+
+<hr />
+<h2 id="2-entradas-e-configuracao">2. Entradas e Configuração<a class="headerlink" href="#2-entradas-e-configuracao" title="Permanent link">¶</a></h2>
+<h3 id="21-arquivos-de-input">2.1. Arquivos de Input<a class="headerlink" href="#21-arquivos-de-input" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Base do Dia Atual</strong>: <code>carteira_online/production/bases_output/base_portfolios.xlsx</code>.</li>
+<li><strong>Base do Dia Anterior</strong>: O arquivo mais recente em <code>carteira_online/production/carteiras_luxor_historico/bases_completas/</code>.</li>
+</ul>
+<h3 id="22-configuracao-interna">2.2. Configuração Interna<a class="headerlink" href="#22-configuracao-interna" title="Permanent link">¶</a></h3>
+<p>No início do script, duas variáveis principais definem o escopo do cálculo:</p>
+<ul>
+<li><code>self.fund_names</code>: Lista os fundos para os quais a cota e o retorno serão calculados.</li>
+<li><code>self.benchmark_names</code>: Mapeia os tickers de benchmarks e outros ativos (TCI, IP Atlas, Luxor Stocks, etc.) para os nomes que aparecerão no relatório final.</li>
+</ul>
+<hr />
+<h2 id="3-logica-de-calculo">3. Lógica de Cálculo<a class="headerlink" href="#3-logica-de-calculo" title="Permanent link">¶</a></h2>
+<h3 id="31-retorno-diario-1d-atribuicao-de-performance">3.1. Retorno Diário (1D) - Atribuição de Performance<a class="headerlink" href="#31-retorno-diario-1d-atribuicao-de-performance" title="Permanent link">¶</a></h3>
+<p>O retorno diário de cada fundo é calculado pelo método <code>calculate_perf_attr</code>, que utiliza a <strong>atribuição de performance</strong> de cada ativo.</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TD
+    subgraph AA["**Cálculo de Atribuição**"]
+        direction TB
+        A["% Exposição (D-1)&lt;br&gt; no fechamento anterior"] --&gt; C{"Multiplica"}
+        B["% Variação do Preço (1D)&lt;br&gt;no dia"] --&gt; C
+        C --&gt; D["Atribuição do Ativo"]
+    end
+
+    subgraph BB["**Retorno 1D do Fundo**"]
+        direction TB
+        E["Soma das Atribuições&lt;br&gt;de todos os ativos"] --&gt; F["Conversão USD/BRL&lt;br&gt;se necessário"]
+        F --&gt; G["Retorno 1D Final"]
+    end
+
+    AA --&gt; BB
+
+</code></pre>
+</div>
+
+<ul>
+<li>A lógica multiplica a <strong>exposição percentual (<code>%_pl</code>)</strong> de cada ativo no fechamento anterior pela <strong>variação de preço</strong> do ativo no dia.</li>
+<li>A variação de preço é obtida via <code>luxorDB_datareader</code>.</li>
+<li>A soma das atribuições de todos os ativos resulta no retorno 1D do fundo na sua moeda local.</li>
+<li>O <code>calculate_returns</code> então converte esse valor para BRL e USD, usando a variação diária do <code>usdbrl</code>.</li>
+</ul>
+<h3 id="32-cota-gerencial">3.2. Cota Gerencial<a class="headerlink" href="#32-cota-gerencial" title="Permanent link">¶</a></h3>
+<p>A nova cota de cada fundo é calculada pelo método <code>calculate_quota</code>.</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TD
+    subgraph "**Cálculo da Nova Cota**"
+        A["PL do Fundo&lt;br&gt;(Soma do Mkt_Value da base atual)"] --&gt; D
+        B["Ajuste Manual de PL&lt;br&gt;(self.fund_pl_variation_adjust)"] --&gt; D
+        C["Qtd. de Cotas (D-1)&lt;br&gt;(lida da base de cotas)"] --&gt; E
+        D{"PL Ajustado"} --&gt; E{"Divide"}
+        E --&gt; F["Nova Cota Gerencial"]
+    end</code></pre>
+</div>
+
+<ul>
+<li><strong>PL (Patrimônio Líquido)</strong>: É a soma do <code>Mkt_Value</code> de todos os ativos na <code>base_portfolios.xlsx</code> do dia.</li>
+<li><strong>Ajuste Manual de PL</strong>: A variável <code>self.fund_pl_variation_adjust</code> permite extornar valores de aportes/resgates que já impactaram o caixa, mas cuja quantidade de cotas ainda não foi atualizada na base oficial.</li>
+<li><strong>Quantidade de Cotas</strong>: O script busca a última quantidade de cotas registrada para o fundo na sua respectiva base histórica.</li>
+<li><strong>Cálculo Final</strong>: <code>PL Ajustado / Quantidade de Cotas (D-1)</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Ajuste por Amortização</strong>: O cálculo da cota utiliza o método <code>LuxorQuery.get_quota_adjusted_by_amortization</code>, que já retorna o valor da cota histórica corrigido por eventos de amortização (ex: Maratona). Os fatores e datas de amortização estão definidas diretamente no método do <code>LuxorQuery</code>.</p>
+</blockquote>
+<h3 id="33-retornos-mtd-e-ytd">3.3. Retornos MTD e YTD<a class="headerlink" href="#33-retornos-mtd-e-ytd" title="Permanent link">¶</a></h3>
+<p>O método <code>calculate_returns</code> consolida os cálculos:</p>
+<ul>
+<li><strong>Retorno 1D</strong>: Utiliza a atribuição de performance já calculada.</li>
+<li><strong>Retorno MTD e YTD</strong>: Utiliza a <strong>nova cota gerencial</strong> e a divide pela cota de referência (final do mês anterior e final do ano anterior, respectivamente), obtidas via <code>luxorDB_datareader</code>.</li>
+</ul>
+<h3 id="34-benchmarks">3.4. Benchmarks<a class="headerlink" href="#34-benchmarks" title="Permanent link">¶</a></h3>
+<p>Após o cálculo dos fundos, o método <code>calculate_benchmarks</code> itera sobre os atvios de <code>self.benchmark_names</code> e calcula os mesmos retornos (1D, MTD, YTD) para cada um, usando o <code>luxorDB_datareader</code>.</p>
+<hr />
+<h2 id="4-outputs">4. Outputs<a class="headerlink" href="#4-outputs" title="Permanent link">¶</a></h2>
+<h3 id="41-ordenacao-do-relatorio">4.1. Ordenação do Relatório<a class="headerlink" href="#41-ordenacao-do-relatorio" title="Permanent link">¶</a></h3>
+<p>O método <code>save_hist_return</code> define a ordem de exibição dos fundos e benchmarks no relatório. A ordenação é controlada por dois dicionários que mapeiam cada fundo/benchmark a um valor numérico, um para a visão em USD e outro para BRL.</p>
+<h3 id="42-exportando-as-bases">4.2. Exportando as bases<a class="headerlink" href="#42-exportando-as-bases" title="Permanent link">¶</a></h3>
+<p>O script gera e atualiza o arquivo <code>historical_return.xlsx</code> em dois locais:</p>
+<ol>
+<li><strong>Base gerencial de retornos</strong>: <code>carteira_online/production/bases_historicas/historical_return.xlsx</code></li>
+<li><strong>Base para o Power BI</strong>: <code>carteira_online/historical_return.xlsx</code><blockquote>
+<p>As bases são iguais. A diferença é que um é a base final que vai para o relatório de retornos e o outro é uma base editável, que será usada para inputar novas quantidades de cotas gerenciais quando houverem aportes/resgates.</p>
+</blockquote>
+</li>
+</ol>
+<hr />
 
 
 

@@ -309,29 +309,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../architecture/data_flow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Data-flow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../architecture/bloomberg_data_pipeline/" class="md-nav__link">
         
   
@@ -384,6 +361,29 @@
   
   <span class="md-ellipsis">
     Pipeline carteira online
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/pipeline_returns_report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipeline relatório de retornos
     
   </span>
   
@@ -1364,10 +1364,12 @@
 </li>
 <li>
 <p><strong>Interações Principais</strong>  </p>
-</li>
+<ul>
 <li><code>portfolio_builder.py</code>: lê as abas para montar o portfólio inicial.  </li>
 <li>Serve de base para geração de <code>input_data.xlsx</code>.  </li>
 <li>Influencia o <code>cash_calculator.py</code> através das posições calculadas.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="input_dataxlsx">input_data.xlsx<a class="headerlink" href="#input_dataxlsx" title="Permanent link">¶</a></h2>
@@ -1382,9 +1384,11 @@
 </li>
 <li>
 <p><strong>Interações Principais</strong>  </p>
-</li>
+<ul>
 <li><code>portfolio_builder.py</code>: usa para gerar <code>base_portfolios.xlsx</code> e atualizar <code>base_carteira_online_v12.xlsx</code>.  </li>
 <li>Alimenta o relatório Power BI <code>carteira_online.pbix</code>.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="base_portfoliosxlsx">base_portfolios.xlsx<a class="headerlink" href="#base_portfoliosxlsx" title="Permanent link">¶</a></h2>
@@ -1399,10 +1403,12 @@
 </li>
 <li>
 <p><strong>Interações Principais</strong>  </p>
-</li>
+<ul>
 <li><code>portfolio_builder.py</code>: cria e salva nesta pasta.  </li>
 <li>Copiada para <code>carteiras_luxor_historico/bases_completas/</code> diariamente ao final do pregão.  </li>
 <li><code>risk_metrics_updater.py</code> e <code>hist_concentration_updater.py</code>: consomem para cálculo de métricas.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="base_carteira_online_v12xlsx">base_carteira_online_v12.xlsx<a class="headerlink" href="#base_carteira_online_v12xlsx" title="Permanent link">¶</a></h2>
@@ -1417,9 +1423,11 @@
 </li>
 <li>
 <p><strong>Interações Principais</strong>  </p>
-</li>
+<ul>
 <li><code>portfolio_builder.py</code>: gera esta planilha.  </li>
 <li>Power BI (<code>carteira_online.pbix</code>): consome diretamente.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="historical_returnxlsx-raw">historical_return.xlsx (raw)<a class="headerlink" href="#historical_returnxlsx-raw" title="Permanent link">¶</a></h2>
@@ -1434,10 +1442,12 @@
 </li>
 <li>
 <p><strong>Interações Principais</strong>  </p>
-</li>
+<ul>
 <li><code>return_calculator.py</code>: gera esta planilha.  </li>
 <li><code>historical_quotas_updater.py</code>: consome para atualizar séries de cotas em <code>source_bases</code>.  </li>
 <li>Relatório Power BI <code>relatorio_retornos.pbix</code>.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="historical_returnxlsx-output-final">historical_return.xlsx (output final)<a class="headerlink" href="#historical_returnxlsx-output-final" title="Permanent link">¶</a></h2>
@@ -1452,9 +1462,11 @@
 </li>
 <li>
 <p><strong>Interações Principais</strong>  </p>
-</li>
+<ul>
 <li><code>return_calculator.py</code>: gera esta cópia final.  </li>
 <li>Power BI (<code>relatorio_retornos.pbix</code>): consome diretamente.</li>
+</ul>
+</li>
 </ul>
 <hr />
 
