@@ -58,6 +58,7 @@ A aparência do relatório é definida no início do script `portfolio_builder.p
 - **Cores Disponíveis**: As cores são definidas em `self.colors` (e.g., `{"nome_cor": "#HEXCODE"}`).
 - **Dicionário**: `self.color_map` associa cada "Grupo" a uma cor pré-definida (e.g., `"azul_escuro"`, `"verde"`).
 - **Exceção**: Posições com valor de mercado negativo são **sempre vermelhas**, independentemente do grupo mapeado.
+- **Observação**: Todo novo grupo precisa ter uma cor associada ou então o script irá crashar. 
 
 ### 3.2. Mapeamento de Ordem
 - **Dicionário**: `self.order_modifiers` atribui um valor numérico a cada "Grupo" para definir a prioridade de exibição.
