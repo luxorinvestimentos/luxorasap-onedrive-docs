@@ -2,126 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://SEU_DOMINIO/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/architecture/bloomberg_data_pipeline/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/architecture/data_flow/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/architecture/file_tree/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://SEU_DOMINIO/architecture/pipeline_carteira_online/</loc>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/architecture/pipeline_luxorASAP/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
+    </url>
+    <url>
+         <loc>https://SEU_DOMINIO/architecture/pipeline_returns/</loc>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/how_to/add_new_asset/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/how_to/create_price_series/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/how_to/troubleshoot/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/luxorDB_dataloader/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/luxorDB_datareader/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/market_data_extractor/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/market_data_loader/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/run_luxorASAP/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/asset_data_extraction/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/btg_data_extraction/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/cash_calculator/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/historical_data_extraction/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/leitor_carteira_excel/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/onedrive_file_redirect/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/portfolio_builder/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/carteira_online/production/return_calculator/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/custom_funds_quotas/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/daily_pnl_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/hist_concentration_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/historical_quotas_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/non_bbg_data_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/risk_metrics_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/swaps_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/modules/source_bases/scripts/us_cash_updater/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
     <url>
          <loc>https://SEU_DOMINIO/planilhas/planilhas/</loc>
-         <lastmod>2025-08-01</lastmod>
+         <lastmod>2025-08-04</lastmod>
     </url>
 </urlset>

@@ -10,24 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://SEU_DOMINIO/modules/source_bases/scripts/custom_funds_quotas/">
+        <link rel="canonical" href="https://SEU_DOMINIO/architecture/pipeline_carteira_online/">
       
       
+        <link rel="prev" href="../pipeline_luxorASAP/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>custom_funds_quotas_updater.md - LuxorASAP Onedrive Docs</title>
+        <title>Pipeline carteira online - LuxorASAP Onedrive Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#custom_funds_quotas_updatermd" class="md-skip">
+        <a href="#arquitetura-pipeline-da-carteira-online" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="LuxorASAP Onedrive Docs" class="md-header__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
+    <a href="../.." title="LuxorASAP Onedrive Docs" class="md-header__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo_png.png" alt="logo">
+  <img src="../../assets/logo_png.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              custom_funds_quotas_updater.md
+              Pipeline carteira online
             
           </span>
         </div>
@@ -205,9 +209,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="LuxorASAP Onedrive Docs" class="md-nav__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
+    <a href="../.." title="LuxorASAP Onedrive Docs" class="md-nav__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo_png.png" alt="logo">
+  <img src="../../assets/logo_png.png" alt="logo">
 
     </a>
     LuxorASAP Onedrive Docs
@@ -222,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -241,18 +245,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -268,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Arquitetura
@@ -282,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/file_tree/" class="md-nav__link">
+      <a href="../file_tree/" class="md-nav__link">
         
   
   
@@ -305,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/data_flow/" class="md-nav__link">
+      <a href="../data_flow/" class="md-nav__link">
         
   
   
@@ -328,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/bloomberg_data_pipeline/" class="md-nav__link">
+      <a href="../bloomberg_data_pipeline/" class="md-nav__link">
         
   
   
@@ -351,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_luxorASAP/" class="md-nav__link">
+      <a href="../pipeline_luxorASAP/" class="md-nav__link">
         
   
   
@@ -371,10 +377,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_carteira_online/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pipeline carteira online
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -385,6 +413,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-visao-geral-do-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Visão Geral do Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-input-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Input de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuracao-de-cores-e-ordenacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuração de Cores e Ordenação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configuração de Cores e Ordenação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mapeamento-de-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Mapeamento de Cores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mapeamento-de-ordem" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Mapeamento de Ordem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-processo-de-construcao-metodo-selfbuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Processo de Construção (Método self.build)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-agendamento-e-publicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Agendamento e Publicação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Agendamento e Publicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agendamento-do-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agendamento do Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicacao-no-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publicação no Power BI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -480,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/portfolio_builder/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/portfolio_builder/" class="md-nav__link">
         
   
   
@@ -503,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/return_calculator/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/return_calculator/" class="md-nav__link">
         
   
   
@@ -526,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/cash_calculator/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/cash_calculator/" class="md-nav__link">
         
   
   
@@ -549,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/btg_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/btg_data_extraction/" class="md-nav__link">
         
   
   
@@ -572,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/asset_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/asset_data_extraction/" class="md-nav__link">
         
   
   
@@ -595,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/historical_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/historical_data_extraction/" class="md-nav__link">
         
   
   
@@ -618,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/leitor_carteira_excel/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/leitor_carteira_excel/" class="md-nav__link">
         
   
   
@@ -641,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/onedrive_file_redirect/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/onedrive_file_redirect/" class="md-nav__link">
         
   
   
@@ -710,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hist_concentration_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/hist_concentration_updater/" class="md-nav__link">
         
   
   
@@ -733,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom_funds_quotas_updater.md" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/custom_funds_quotas_updater.md" class="md-nav__link">
         
   
   
@@ -756,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../non_bbg_data_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/non_bbg_data_updater/" class="md-nav__link">
         
   
   
@@ -779,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daily_pnl_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/daily_pnl_updater/" class="md-nav__link">
         
   
   
@@ -802,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../historical_quotas_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/historical_quotas_updater/" class="md-nav__link">
         
   
   
@@ -825,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../risk_metrics_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/risk_metrics_updater/" class="md-nav__link">
         
   
   
@@ -848,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../us_cash_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/us_cash_updater/" class="md-nav__link">
         
   
   
@@ -871,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaps_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/swaps_updater/" class="md-nav__link">
         
   
   
@@ -902,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../run_luxorASAP/" class="md-nav__link">
+      <a href="../../modules/run_luxorASAP/" class="md-nav__link">
         
   
   
@@ -925,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../market_data_extractor/" class="md-nav__link">
+      <a href="../../modules/market_data_extractor/" class="md-nav__link">
         
   
   
@@ -948,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../market_data_loader/" class="md-nav__link">
+      <a href="../../modules/market_data_loader/" class="md-nav__link">
         
   
   
@@ -971,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source_bases_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases_updater/" class="md-nav__link">
         
   
   
@@ -994,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../luxorDB_datareader/" class="md-nav__link">
+      <a href="../../modules/luxorDB_datareader/" class="md-nav__link">
         
   
   
@@ -1017,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../luxorDB_dataloader/" class="md-nav__link">
+      <a href="../../modules/luxorDB_dataloader/" class="md-nav__link">
         
   
   
@@ -1047,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../planilhas/planilhas/" class="md-nav__link">
+      <a href="../../planilhas/planilhas/" class="md-nav__link">
         
   
   
@@ -1107,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/add_new_asset/" class="md-nav__link">
+      <a href="../../how_to/add_new_asset/" class="md-nav__link">
         
   
   
@@ -1130,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/create_price_series/" class="md-nav__link">
+      <a href="../../how_to/create_price_series/" class="md-nav__link">
         
   
   
@@ -1180,11 +1321,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#title-custom_funds_quotas_updaterpy" class="md-nav__link">
+  <a href="#1-visao-geral-do-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      title: custom_funds_quotas_updater.py
+      1. Visão Geral do Pipeline
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-input-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Input de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuracao-de-cores-e-ordenacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuração de Cores e Ordenação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configuração de Cores e Ordenação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mapeamento-de-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Mapeamento de Cores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mapeamento-de-ordem" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Mapeamento de Ordem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-processo-de-construcao-metodo-selfbuild" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Processo de Construção (Método self.build)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-agendamento-e-publicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Agendamento e Publicação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Agendamento e Publicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agendamento-do-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agendamento do Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicacao-no-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publicação no Power BI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1204,45 +1429,112 @@
 
 
 
-<h1 id="custom_funds_quotas_updatermd">custom_funds_quotas_updater.md<a class="headerlink" href="#custom_funds_quotas_updatermd" title="Permanent link">¶</a></h1>
+<h1 id="arquitetura-pipeline-da-carteira-online">Arquitetura: Pipeline da Carteira Online<a class="headerlink" href="#arquitetura-pipeline-da-carteira-online" title="Permanent link">¶</a></h1>
+<p>Esta página descreve em detalhes o pipeline responsável pela construção e publicação da Carteira Online, cujo script principal é o <code>portfolio_builder.py</code>.</p>
 <hr />
-<h2 id="title-custom_funds_quotas_updaterpy">title: custom_funds_quotas_updater.py<a class="headerlink" href="#title-custom_funds_quotas_updaterpy" title="Permanent link">¶</a></h2>
-<h1 id="custom_funds_quotas_updaterpy"><code>custom_funds_quotas_updater.py</code><a class="headerlink" href="#custom_funds_quotas_updaterpy" title="Permanent link">¶</a></h1>
-<p>Gera séries de cotas para portfolios customizados da Luxor.</p>
+<h2 id="1-visao-geral-do-pipeline">1. Visão Geral do Pipeline<a class="headerlink" href="#1-visao-geral-do-pipeline" title="Permanent link">¶</a></h2>
+<div align="center">
+<pre class="mermaid"><code>flowchart TB
+  subgraph AA["**Input**"]
+    direction LR
+    A["Operation_Desk_V4.xlsm"] -- "Salvar Input" --&gt; B["input_data.xls"]
+  end
 
+  subgraph BB["**Construção**"]
+    direction LR
+    C["portfolio_builder.py"]
+  end
 
-<div class="doc doc-object doc-module">
+  subgraph EE["**Gerencial**"]
+    direction TB
+    E[("Base gerencial completa&lt;br&gt;(base_portfolios.xlsx)")]
+    H[("Histórico em&lt;br&gt;carteiras_luxor_historico/")]
+  end
 
+  F[("hist_risk_metrics.xlsx")]
+  subgraph DD["**Publicação**"]
+    direction TB
+    D["base_carteira_online_v12.xlsx"]
+    G["Power BI Service"]
+   end
 
-
-<a id="source_bases.scripts.custom_funds_quotas_updater"></a>
-    <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
+  AA --&gt; BB
+  BB --&gt; DD
+  BB --&gt; EE
+  BB --&gt; F
+  D --&gt; G
+  E --&gt;|após 17h| H</code></pre>
 </div>
+<hr />
+<h2 id="2-input-de-dados">2. Input de Dados<a class="headerlink" href="#2-input-de-dados" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Arquivo Principal</strong>: <code>carteira_online/production/bases_input/input_data.xls</code></li>
+<li><strong>Origem</strong>: É uma cópia da planilha <code>Operation_Desk_V4.xlsm</code>.</li>
+<li><strong>Geração</strong>: O arquivo <code>input_data.xls</code> é gerado quando o usuário clica no botão "salvar_input" na <code>Operation_Desk_V4.xlsm</code>.</li>
+</ul>
+<hr />
+<h2 id="3-configuracao-de-cores-e-ordenacao">3. Configuração de Cores e Ordenação<a class="headerlink" href="#3-configuracao-de-cores-e-ordenacao" title="Permanent link">¶</a></h2>
+<p>A aparência do relatório é definida no início do script <code>portfolio_builder.py</code>, com base no campo <strong>"Grupo"</strong> cadastrado na aba 'ativos' da <code>Operation_Desk</code>.</p>
+<h3 id="31-mapeamento-de-cores">3.1. Mapeamento de Cores<a class="headerlink" href="#31-mapeamento-de-cores" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Cores Disponíveis</strong>: As cores são definidas em <code>self.colors</code> (e.g., <code>{"nome_cor": "#HEXCODE"}</code>).</li>
+<li><strong>Dicionário</strong>: <code>self.color_map</code> associa cada "Grupo" a uma cor pré-definida (e.g., <code>"azul_escuro"</code>, <code>"verde"</code>).</li>
+<li><strong>Exceção</strong>: Posições com valor de mercado negativo são <strong>sempre vermelhas</strong>, independentemente do grupo mapeado.</li>
+</ul>
+<h3 id="32-mapeamento-de-ordem">3.2. Mapeamento de Ordem<a class="headerlink" href="#32-mapeamento-de-ordem" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Dicionário</strong>: <code>self.order_modifiers</code> atribui um valor numérico a cada "Grupo" para definir a prioridade de exibição.</li>
+<li><strong>Lógica</strong>: A ordem final de um ativo é <code>modificador_do_grupo + valor_de_mercado</code>.</li>
+<li>O modificador deve ser sempre negativo e ter 9 zeros à direita. Modificadores menores aparecem mais acima.</li>
+<li>Dentro de um mesmo grupo, ativos com maior valor de mercado aparecem primeiro.</li>
+</ul>
+<hr />
+<h2 id="4-processo-de-construcao-metodo-selfbuild">4. Processo de Construção (Método <code>self.build</code>)<a class="headerlink" href="#4-processo-de-construcao-metodo-selfbuild" title="Permanent link">¶</a></h2>
+<p>O método <code>self.build</code> orquestra a criação da carteira em uma sequência de passos:</p>
+<div align="center">
+<pre class="mermaid"><code>graph TB
+  subgraph AA["**self.build**"]
+    direction TB
+    A[Carregar Ativos e Posições] --&gt; B[Unir Dados];
+    B --&gt; C[Obter Preços e Caixa];
+    C --&gt; D[Calcular Valor de Mercado];
+    D --&gt; E[Calcular PL e % Participação];
+    E --&gt; F[Calcular Métricas de Risco];
+    F --&gt; G[Aplicar Agregações de Ativos];
+    G --&gt; H[Definir Ordem Final];
+    H --&gt; I["Salvar Outputs (.xlsx)"];
+  end</code></pre>
+</div>
+
+<ol>
+<li><strong>Carregar Ativos e Posições</strong>: Lê as abas de <code>input_data.xls</code>. </li>
+<li><strong>Obter Preços e Caixa</strong>:</li>
+<li><strong>Preços</strong>: Utiliza o <code>luxorDB_datareader</code> para buscar os preços dos ativos.</li>
+<li><strong>Caixa</strong>: Utiliza o <code>cash_calculator</code> para obter o caixa (onshore do BTG e offshore da <code>Operation_Desk</code>), somando os Trades RV.</li>
+<li><strong>Calcular Valor de Mercado</strong>: Multiplica a quantidade pelo preço de cada ativo.</li>
+<li><strong>Calcular PL e Participação</strong>: Calcula o Patrimônio Líquido de cada fundo e o percentual que cada ativo representa.</li>
+<li><strong>Exportar <code>base_portfolios.xlsx</code></strong>: Salva uma versão sem agregações em <code>carteira_online/production/bases_output/</code>. Após as 17h, uma cópia é arquivada em <code>carteira_online/production/carteiras_luxor_historico/</code>.</li>
+<li><strong>Calcular Métricas</strong>: Processa métricas de risco e concentração.</li>
+<li><strong>Agregar Ativos</strong>:</li>
+<li>Agrupa ilíquidos em "iliquids bz" e "iliquids us", mantendo abertos apenas gestores/empresas que representam de 1% do portfólio.</li>
+<li>Agrega ativos com o mesmo <code>Asset</code> (ex: <code>micrsoft_msft us equity</code> e <code>microsoft_msft34 bz equity</code>).</li>
+<li><strong>Salvar Outputs Finais</strong>:</li>
+<li><code>carteira_online/base_carteira_online_v12.xlsx</code></li>
+<li><code>carteira_online/production/metricas_risco/hist_risk_metrics.xlsx</code></li>
+</ol>
+<hr />
+<h2 id="5-agendamento-e-publicacao">5. Agendamento e Publicação<a class="headerlink" href="#5-agendamento-e-publicacao" title="Permanent link">¶</a></h2>
+<h3 id="agendamento-do-script">Agendamento do Script<a class="headerlink" href="#agendamento-do-script" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Ambiente</strong>: Máquina Virtual.</li>
+<li><strong>Frequência</strong>: O script <code>portfolio_builder.py</code> é executado a cada 10 minutos no agendador do windows, nos minutos terminados em "7" (ex: 11:07, 11:17, 11:27...).</li>
+</ul>
+<h3 id="publicacao-no-power-bi">Publicação no Power BI<a class="headerlink" href="#publicacao-no-power-bi" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Arquivo Fonte</strong>: <code>projetos/dashboards/Carteira_Online_v1.25.pbix</code> (localizado no OneDrive).</li>
+<li><strong>Workspace</strong>: "Luxor Investimentos" no Power BI Service.</li>
+<li><strong>Atualização</strong>: O modelo semântico é atualizado via Power Automate a cada 10 minutos, das 11:00 às 17:50.</li>
+</ul>
 
 
 
@@ -1295,10 +1587,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

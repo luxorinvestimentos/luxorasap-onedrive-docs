@@ -16,7 +16,7 @@
         <link rel="prev" href="../bloomberg_data_pipeline/">
       
       
-        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
+        <link rel="next" href="../pipeline_carteira_online/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -488,6 +488,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline_carteira_online/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipeline carteira online
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1388,21 +1411,23 @@
 <pre class="mermaid"><code>flowchart TD
     subgraph "**Processar historico_trades_ativos.xlsx**"
     direction LR
-      B{Monitora: historico_trades_ativos.xlsx};
-      B -- Mudou? --&gt; C[Ler abas da planilha];
+      B[Monitora: historico_trades_ativos.xlsx];
+      B --&gt; F{"Mudou?"};
+      F -- Sim --&gt; C[Ler abas da planilha];
+      F --&gt;|"10s"| B;
       C --&gt; D[Processar para tabelas parquet];
       D --&gt; E[(Salvar em luxorasap/enriched/parquet)];
-      E --&gt;|"10s"| B;
     end</code></pre>
 <pre class="mermaid"><code>flowchart TD
     subgraph "**Processar Trades**"
     direction LR
-      G{Verificar novos trades em enriched/trades.parquet};
-      G -- Novos trades ou Reset? --&gt; H[Processar Trades];
+      G[Verificar novos trades em enriched/trades.parquet];
+      G --&gt; L{"Novos trades&lt;br&gt; ou Reset?"};
+      L -- Sim --&gt; H[Processar Trades];
+      L --&gt;|"10s"| G;
       H --&gt; I[Gerar tabelas de posição];
       I --&gt; J[(Salvar em luxorasap/enriched/parquet)];
-      I --&gt; K["Salvar estado dos módulos em funds_data.pickle"];
-      I --&gt;|"10s"| G;
+      I --&gt; K["Salvar estado&lt;br&gt;dos módulos em funds_data.pickle"];
     end
 </code></pre>
 <h2 id="detalhes-do-processamento">Detalhes do Processamento<a class="headerlink" href="#detalhes-do-processamento" title="Permanent link">¶</a></h2>
