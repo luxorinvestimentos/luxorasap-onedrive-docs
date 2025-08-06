@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://SEU_DOMINIO/modules/source_bases/scripts/hist_concentration_updater/">
+        <link rel="canonical" href="https://SEU_DOMINIO/architecture/pipeline_source_bases/">
       
       
-        <link rel="prev" href="../../../carteira_online/production/onedrive_file_redirect/">
+        <link rel="prev" href="../pipeline_returns_report/">
       
       
-        <link rel="next" href="../non_bbg_data_updater/">
+        <link rel="next" href="../../modules/carteira_online/production/portfolio_builder/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>hist_concentration_updater.py - LuxorASAP Onedrive Docs</title>
+        <title>Pipeline Source Bases - LuxorASAP Onedrive Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hist_concentration_updaterpy" class="md-skip">
+        <a href="#arquitetura-pipeline-source_bases" class="md-skip">
           Skip to content
         </a>
       
@@ -96,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="LuxorASAP Onedrive Docs" class="md-header__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
+    <a href="../.." title="LuxorASAP Onedrive Docs" class="md-header__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo_png.png" alt="logo">
+  <img src="../../assets/logo_png.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              hist_concentration_updater.py
+              Pipeline Source Bases
             
           </span>
         </div>
@@ -209,9 +209,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="LuxorASAP Onedrive Docs" class="md-nav__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
+    <a href="../.." title="LuxorASAP Onedrive Docs" class="md-nav__button md-logo" aria-label="LuxorASAP Onedrive Docs" data-md-component="logo">
       
-  <img src="../../../../assets/logo_png.png" alt="logo">
+  <img src="../../assets/logo_png.png" alt="logo">
 
     </a>
     LuxorASAP Onedrive Docs
@@ -226,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -245,18 +245,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -272,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Arquitetura
@@ -286,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/file_tree/" class="md-nav__link">
+      <a href="../file_tree/" class="md-nav__link">
         
   
   
@@ -309,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/bloomberg_data_pipeline/" class="md-nav__link">
+      <a href="../bloomberg_data_pipeline/" class="md-nav__link">
         
   
   
@@ -332,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_luxorASAP/" class="md-nav__link">
+      <a href="../pipeline_luxorASAP/" class="md-nav__link">
         
   
   
@@ -355,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_carteira_online/" class="md-nav__link">
+      <a href="../pipeline_carteira_online/" class="md-nav__link">
         
   
   
@@ -378,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_returns_report/" class="md-nav__link">
+      <a href="../pipeline_returns_report/" class="md-nav__link">
         
   
   
@@ -398,10 +400,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../architecture/pipeline_source_bases/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pipeline Source Bases
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -412,6 +436,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-visao-geral-do-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Visão Geral do Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-non_bbg_data_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. non_bbg_data_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-historical_quotas_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. historical_quotas_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-risk_metrics_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. risk_metrics_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-hist_concentration_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. hist_concentration_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-us_cash_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. us_cash_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -428,20 +526,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -457,7 +553,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Módulos
@@ -509,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/portfolio_builder/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/portfolio_builder/" class="md-nav__link">
         
   
   
@@ -532,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/return_calculator/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/return_calculator/" class="md-nav__link">
         
   
   
@@ -555,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/cash_calculator/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/cash_calculator/" class="md-nav__link">
         
   
   
@@ -578,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/btg_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/btg_data_extraction/" class="md-nav__link">
         
   
   
@@ -601,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/asset_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/asset_data_extraction/" class="md-nav__link">
         
   
   
@@ -624,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/historical_data_extraction/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/historical_data_extraction/" class="md-nav__link">
         
   
   
@@ -647,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/leitor_carteira_excel/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/leitor_carteira_excel/" class="md-nav__link">
         
   
   
@@ -670,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../carteira_online/production/onedrive_file_redirect/" class="md-nav__link">
+      <a href="../../modules/carteira_online/production/onedrive_file_redirect/" class="md-nav__link">
         
   
   
@@ -698,20 +794,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -727,7 +821,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             source_bases.scripts
@@ -738,32 +832,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    hist_concentration_updater.py
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../modules/source_bases/scripts/hist_concentration_updater/" class="md-nav__link">
         
   
   
@@ -774,35 +846,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#source_bases.scripts.hist_concentration_updater" class="md-nav__link">
-    <span class="md-ellipsis">
-      hist_concentration_updater
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -815,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom_funds_quotas_updater.md" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/custom_funds_quotas_updater.md" class="md-nav__link">
         
   
   
@@ -838,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../non_bbg_data_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/non_bbg_data_updater/" class="md-nav__link">
         
   
   
@@ -861,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daily_pnl_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/daily_pnl_updater/" class="md-nav__link">
         
   
   
@@ -884,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../historical_quotas_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/historical_quotas_updater/" class="md-nav__link">
         
   
   
@@ -907,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../risk_metrics_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/risk_metrics_updater/" class="md-nav__link">
         
   
   
@@ -930,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../us_cash_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/us_cash_updater/" class="md-nav__link">
         
   
   
@@ -953,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaps_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases/scripts/swaps_updater/" class="md-nav__link">
         
   
   
@@ -984,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../run_luxorASAP/" class="md-nav__link">
+      <a href="../../modules/run_luxorASAP/" class="md-nav__link">
         
   
   
@@ -1007,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../market_data_extractor/" class="md-nav__link">
+      <a href="../../modules/market_data_extractor/" class="md-nav__link">
         
   
   
@@ -1030,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../market_data_loader/" class="md-nav__link">
+      <a href="../../modules/market_data_loader/" class="md-nav__link">
         
   
   
@@ -1053,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source_bases_updater/" class="md-nav__link">
+      <a href="../../modules/source_bases_updater/" class="md-nav__link">
         
   
   
@@ -1076,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../luxorDB_datareader/" class="md-nav__link">
+      <a href="../../modules/luxorDB_datareader/" class="md-nav__link">
         
   
   
@@ -1099,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../luxorDB_dataloader/" class="md-nav__link">
+      <a href="../../modules/luxorDB_dataloader/" class="md-nav__link">
         
   
   
@@ -1129,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../planilhas/planilhas/" class="md-nav__link">
+      <a href="../../planilhas/planilhas/" class="md-nav__link">
         
   
   
@@ -1189,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/add_new_asset/" class="md-nav__link">
+      <a href="../../how_to/add_new_asset/" class="md-nav__link">
         
   
   
@@ -1212,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../how_to/create_price_series/" class="md-nav__link">
+      <a href="../../how_to/create_price_series/" class="md-nav__link">
         
   
   
@@ -1262,9 +1305,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#source_bases.scripts.hist_concentration_updater" class="md-nav__link">
+  <a href="#1-visao-geral-do-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      hist_concentration_updater
+      1. Visão Geral do Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-non_bbg_data_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. non_bbg_data_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-historical_quotas_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. historical_quotas_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-risk_metrics_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. risk_metrics_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-hist_concentration_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. hist_concentration_updater.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-us_cash_updaterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. us_cash_updater.py
     </span>
   </a>
   
@@ -1286,51 +1374,138 @@
 
 
 
-<h1 id="hist_concentration_updaterpy"><code>hist_concentration_updater.py</code><a class="headerlink" href="#hist_concentration_updaterpy" title="Permanent link">¶</a></h1>
-<p>Atualiza <strong>hist_portfolios_concentration.parquet</strong> (função descontinuada).</p>
+<h1 id="arquitetura-pipeline-source_bases">Arquitetura: Pipeline <code>source_bases</code><a class="headerlink" href="#arquitetura-pipeline-source_bases" title="Permanent link">¶</a></h1>
+<p>Este documento detalha o pipeline executado pelo script <code>source_bases_updater.py</code>, que atua como orquestrador para a atualização de diversas bases de dados auxiliares utilizadas pelo LuxorASAP.</p>
+<hr />
+<h2 id="1-visao-geral-do-pipeline">1. Visão Geral do Pipeline<a class="headerlink" href="#1-visao-geral-do-pipeline" title="Permanent link">¶</a></h2>
+<p>O <code>source_bases_updater.py</code> executa uma série de scripts especializados, cada um responsável por gerar ou atualizar um conjunto específico de dados em formato <code>.parquet</code> no ADLS, no diretório <code>luxorasap/enriched/parquet</code>. Embora sejam independentes, os scripts são executados sequencialmente.</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart LR
+    subgraph "**Execução em cascata**"
+        direction LR
+        A[non_bbg_data_updater.py]
+        B[historical_quotas_updater.py]
+        C[risk_metrics_updater.py]
+        D[hist_concentration_updater.py]
+        E[us_cash_updater.py]
+    end
 
-
-<div class="doc doc-object doc-module">
-
-
-
-<a id="source_bases.scripts.hist_concentration_updater"></a>
-    <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
+    subgraph "**luxorasap/enriched/parquet**"
+        A --&gt;|dataloader| A1[(hist_non_bbg_px_last.parquet)]
+        B --&gt;|dataloader| B1[(all_funds_quotas.parquet)]
+        B --&gt;|dataloader| B2[("[NOME_FUNDO]_quotas.parquet")]
+        C --&gt;|dataloader| C1[(hist_risk_metrics.parquet)]
+        D --&gt;|dataloader| D1[(hist_concentration.parquet)]
+        E --&gt;|dataloader| E1[(hist_us_cash.parquet)]
+    end</code></pre>
 </div>
 
+<hr />
+<h2 id="2-non_bbg_data_updaterpy">2. non_bbg_data_updater.py<a class="headerlink" href="#2-non_bbg_data_updaterpy" title="Permanent link">¶</a></h2>
+<p>Fluxo de execução:</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TB
+    A0["non_bbg_data_updater.py"]--&gt; B["run()"]
+    A[ativos_sem_bbg.xlsx] --&gt;|input| B["run()"]
+    B --&gt; C[update_hawker]
+    B --&gt; D[get_fidc_trybeI/II_quote]
+    B --&gt; E[Calcular séries adicionais]
+    E --&gt; F[(hist_non_bbg_px_last.parquet)]
+    E --&gt;|sobrescreve| A</code></pre>
+</div>
+<hr />
+<p>O script <code>non_bbg_data_updater.py</code> concentra diversos métodos para criação de séries históricas de dados não-Bloomberg. Entre esses:</p>
+<ul>
+<li>Cálculo de séries IPCA+, CPI+, loans (fixos e variáveis).</li>
+<li>Método <code>update_hawker</code>: estimativa diária de cotas das séries SPX Hawker durante o mês corrente.</li>
+<li>Métodos <code>get_fidc_trybeI_quote</code> e <code>get_fidc_trybeII_quote</code>: atualização de cotas dos FIDCs a partir do arquivo <code>carteiras_btg.xlsx</code> mais recente.</li>
+<li>Chamada <code>run()</code> central coordena tudo.</li>
+</ul>
+<h2 id="3-historical_quotas_updaterpy">3. historical_quotas_updater.py<a class="headerlink" href="#3-historical_quotas_updaterpy" title="Permanent link">¶</a></h2>
+<p>Fluxo de execução:</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TB
+    H1["historico_cotas.xlsx"] --&gt; H2["Remove dados D0"]
+    R1["historical_return.xlsx"] --&gt; R2["Extrair dados atuais"]
+    H2 &amp; R2 --&gt; M["Atualização de cotas e quantidades"]
+    M --&gt;|sobrescreve| H1
+    M --&gt; S2[("all_funds_quotas.parquet")]
+    M --&gt; S3[("[NOME_FUNDO]_quotas.parquet")]</code></pre>
+</div>
+
+<p>O script <code>historical_quotas_updater.py</code> é responsável por atualizar as cotas históricas de todos os fundos Luxor. Ele realiza os seguintes passos:</p>
+<ol>
+<li>Carrega a planilha <code>historico_cotas.xlsx</code> até o dia anterior.</li>
+<li>Carrega a planilha <code>carteira_online/production/bases_historicas/historical_return.xlsx</code> gerada pelo <code>return_calculator.py</code>.</li>
+<li>Remove a última data existente em <code>historico_cotas.xlsx</code>.</li>
+<li>Atualiza <code>historico_cotas.xlsx</code> com as cotas e quantidades mais recentes provenientes dos <code>historical_returns</code>.</li>
+<li>Para fundos não presentes em <code>historical_returns</code>, propaga cota e quantidade do dia anterior.</li>
+<li>Salva (sobrescreve) <code>historico_cotas.xlsx</code>.</li>
+<li>Gera e salva no ADLS:<ul>
+<li><code>all_funds_quotas.parquet</code></li>
+<li><code>[NOME_FUNDO]_quotas.parquet</code> para cada fundo.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="4-risk_metrics_updaterpy">4. risk_metrics_updater.py<a class="headerlink" href="#4-risk_metrics_updaterpy" title="Permanent link">¶</a></h2>
+<p>Fluxo de execução:</p>
+<div align="center">
+
+<pre class="mermaid"><code>flowchart TD
+    ExcelIn["hist_risk_metrics.xlsx&lt;br&gt;(veio do portfolio_builder)"] --&gt;|input| UpdateRisk["Atualização incremental"]
+    ExcelIn2["historico_risk_metrics.xlsx"] --&gt;|input| UpdateRisk
+    UpdateRisk --&gt;|sobrescreve| ExcelIn2
+    UpdateRisk --&gt; SaveParquet[("hist_risk_metrics.parquet&lt;br&gt;(luxorasap/enriched/)")]</code></pre>
+</div>
+<hr />
+<p>O script <code>risk_metrics_updater.py</code> simplesmente recebe como input esta planilha:</p>
+<div class="highlight"><pre><span></span><code>carteira_online/production/carteiras_luxor_historico/metricas_risco/hist_risk_metrics.xlsx
+</code></pre></div>
+<p>Essa planilha possui as métricas mais atualizadas vindas da última execução do <code>portfolio_builder.py</code>. Em seguida, realiza:</p>
+<ul>
+<li>Atualização incremental da base <code>source_bases/historico_risk_metrics.xlsx</code>.</li>
+<li>Sobrescreve a base <code>source_bases/historico_risk_metrics.xlsx</code>.</li>
+<li>Salva no ADLS <code>hist_risk_metrics.parquet</code>.</li>
+</ul>
+<h2 id="5-hist_concentration_updaterpy">5. hist_concentration_updater.py<a class="headerlink" href="#5-hist_concentration_updaterpy" title="Permanent link">¶</a></h2>
+<p>Fluxo de execução:</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TB
+    C1[base_portfolios.xlsx] --&gt; D[Extrair]
+    C2[10 últimas bases_completas] --&gt; D
+    D --&gt; E[Agregação]
+    E --&gt; F[(hist_concentration.parquet)]</code></pre>
+</div>
+
+<p>Este script atualiza a base <code>hist_concentration.parquet</code> a partir da <strong><code>base_portfolios.xlsx</code></strong> e dos <strong>10</strong> arquivos mais recentes em <code>bases_completas/</code>.</p>
+<blockquote>
+<p>🛈 <strong>Uso atual baixo</strong> – Este fluxo está sendo pouco usado, vale avaliar se pode ser descontinuado.</p>
+</blockquote>
+<hr />
+<h2 id="6-us_cash_updaterpy">6. us_cash_updater.py<a class="headerlink" href="#6-us_cash_updaterpy" title="Permanent link">¶</a></h2>
+<p>Fluxo de execução:</p>
+<div align="center">
+<pre class="mermaid"><code>flowchart TB
+    U1[base_portfolios.xlsx] --&gt; V[Extrair caixa]
+    U2[bases_completas] --&gt; V
+    V --&gt; W[("hist_us_cash.parquet&lt;br&gt;(luxorasap/enriched/)")]</code></pre>
+</div>
+
+<p>O script <code>us_cash_updater.py</code> atualiza o histórico de caixa dos fundos A, B e HMX em:</p>
+<div class="highlight"><pre><span></span><code>luxorasap/enriched/parquet/hist_us_cash.parquet
+</code></pre></div>
+<p>Fontes:</p>
+<ul>
+<li>Planilha <code>base_portfolios.xlsx</code> mais recente (gerada pelo <code>portfolio_builder.py</code>).</li>
+<li>Arquivos históricos em <code>carteiras_luxor_historico/bases_completas/</code>.</li>
+</ul>
 
 
 
 
 
 
-  
-  
 
 
 
@@ -1377,10 +1552,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
