@@ -29,11 +29,12 @@ nav:
   - Visão Geral: index.md
 
   - Arquitetura:
-      - Estrutura de arquivos: architecture/file_tree.md
+      - Estrutura de Arquivos: architecture/file_tree.md
       - Bloomberg Data Pipeline: architecture/bloomberg_data_pipeline.md
       - Pipeline run_luxorASAP: architecture/pipeline_luxorASAP.md
-      - Pipeline carteira online: architecture/pipeline_carteira_online.md
-      - Pipeline relatório de retornos: architecture/pipeline_returns_report.md
+      - Pipeline Carteira Online: architecture/pipeline_carteira_online.md
+      - Pipeline Relatório de Retornos: architecture/pipeline_returns_report.md
+      - Pipeline Source Bases: architecture/pipeline_source_bases.md
   - Módulos:
       - carteira_online.production:
           - portfolio_builder.py: modules/carteira_online/production/portfolio_builder.md
